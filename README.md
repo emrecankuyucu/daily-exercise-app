@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 💪 Günlük Egzersiz Uygulaması
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modern ve responsive tasarıma sahip 4 günlük evde egzersiz programı uygulaması.
 
-## Available Scripts
+## 🌟 Özellikler
 
-In the project directory, you can run:
+- ✅ **4 Günlük Program**: Göğüs-Omuz, Bacak-Kalça, Karın-Core, Tüm Vücut egzersizleri
+- ✅ **Responsive Tasarım**: Telefon, tablet ve desktop uyumlu
+- ✅ **Modern Arayüz**: Glassmorphism efektli, animatik arka plan
+- ✅ **Timer Özelliği**: Süreli egzersizler için geri sayım
+- ✅ **Türkçe Arayüz**: Tamamen Türkçe kullanıcı deneyimi
+- ✅ **Accessibility**: Keyboard navigation ve screen reader desteği
 
-### `npm start`
+## 🚀 Canlı Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**[Uygulamayı Dene](https://emrecankuyucu.github.io/egzersizApp)**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Teknolojiler
 
-### `npm test`
+- React 18
+- CSS3 (Animations, Glassmorphism)
+- React Icons
+- Local Storage
+- Responsive Design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📱 Ekran Görüntüleri
 
-### `npm run build`
+Uygulama tüm cihazlarda mükemmel çalışır:
+- 📱 **Mobile**: 360px - 480px
+- 📱 **Tablet**: 481px - 768px  
+- 💻 **Desktop**: 769px+
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏃‍♂️ Nasıl Kullanılır
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Uygulamayı aç
+2. Hangi günün egzersizini yapmak istediğini seç
+3. Egzersizleri sırayla takip et
+4. Timer'lı egzersizlerde geri sayımı bekle
+5. "Tamamlandı" veya "Atla" butonlarını kullan
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏋️‍♀️ Egzersiz Programı
 
-### `npm run eject`
+### Pazartesi - Göğüs, Omuz & Kardiyo
+- Şınav, Dips, Pike Push-up, Burpee, Plank
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Salı - Bacak & Kalça  
+- Squat, Lunge, Glute Bridge, Bulgarian Split Squat, Calf Raise
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Çarşamba - Dinlenme
+- Hafif yürüyüş veya dinlenme
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Perşembe - Karın & Core
+- Crunch, Bicycle Crunch, Russian Twist, Leg Raise, Side Plank
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Cuma - Tüm Vücut + Kardiyo
+- Burpee, Squat Jump, Push-up to Shoulder Tap, Mountain Climber, Superman, Plank
 
-## Learn More
+### Cumartesi & Pazar - Dinlenme
+- İstediğin bölgeyi tekrar et veya dinlen
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔧 Geliştirme
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+# Projeyi klonla
+git clone https://github.com/emrecankuyucu/egzersizApp.git
 
-### Code Splitting
+# Bağımlılıkları yükle
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Geliştirme sunucusunu başlat
+npm start
 
-### Analyzing the Bundle Size
+# Production build
+npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# GitHub Pages'e deploy
+npm run deploy
+```
 
-### Making a Progressive Web App
+## 📄 Lisans
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Bu proje MIT lisansı altında lisanslanmıştır.
 
-### Advanced Configuration
+## 👨‍💻 Geliştirici
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Emrecan Kuyucu**
+- GitHub: [@emrecankuyucu](https://github.com/emrecankuyucu)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+⭐ Bu projeyi beğendiysen yıldız vermeyi unutma!

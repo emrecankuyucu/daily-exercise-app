@@ -2,6 +2,7 @@
   "name": "daily-exercise-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://emrecankuyucu.github.io/egzersizApp",
 
   "dependencies": {
     "@testing-library/dom": "^10.4.1",

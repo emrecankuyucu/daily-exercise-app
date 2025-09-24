@@ -1,0 +1,248 @@
+.day-selector-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.day-card {
+  padding: 25px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.6);
+}
+
+.day-card:active {
+  transform: translateY(-5px) scale(0.98);
+}
+
+.workout-day {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.4);
+}
+
+.workout-day:hover {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.6);
+}
+
+.rest-day {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.3) 0%, rgba(245, 87, 108, 0.3) 100%);
+  border: 2px solid rgba(240, 147, 251, 0.4);
+}
+
+.rest-day:hover {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.4) 0%, rgba(245, 87, 108, 0.4) 100%);
+  border: 2px solid rgba(240, 147, 251, 0.6);
+}
+
+.day-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.day-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.3;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.exercise-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.workout-icon,
+.rest-icon {
+  font-size: 2rem;
+  margin-top: 5px;
+  animation: bounce 2s infinite;
+}
+
+.rest-icon {
+  animation: pulse 2s infinite;
+}
+
+.instruction-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.instruction-text p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .days-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    padding: 0 5px;
+  }
+  
+  .day-card {
+    padding: 18px 12px;
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .days-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .day-card {
+    padding: 16px 10px;
+    min-height: 120px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .day-name {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+  
+  .day-title {
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  
+  .exercise-count {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    margin-bottom: 6px;
+  }
+  
+  .workout-icon,
+  .rest-icon {
+    font-size: 1.3rem;
+  }
+  
+  .instruction-text {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .day-selector-container {
+    padding: 0 5px;
+  }
+  
+  .days-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .day-card {
+    padding: 12px 8px;
+    min-height: 100px;
+    border-radius: 12px;
+  }
+  
+  .day-name {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+  
+  .day-title {
+    font-size: 0.65rem;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+  
+  .exercise-count {
+    font-size: 0.55rem;
+    padding: 2px 6px;
+    margin-bottom: 4px;
+  }
+  
+  .workout-icon,
+  .rest-icon {
+    font-size: 1.1rem;
+  }
+  
+  .instruction-text {
+    font-size: 0.85rem;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .days-grid {
+    gap: 6px;
+  }
+  
+  .day-card {
+    padding: 10px 6px;
+    min-height: 90px;
+  }
+  
+  .day-name {
+    font-size: 0.8rem;
+  }
+  
+  .day-title {
+    font-size: 0.6rem;
+  }
+  
+  .exercise-count {
+    font-size: 0.5rem;
+    padding: 2px 5px;
+  }
+  
+  .workout-icon,
+  .rest-icon {
+    font-size: 1rem;
+  }
+}
+
+/* Animation delays for staggered entrance */
+.day-card:nth-child(1) { animation-delay: 0.1s; }
+.day-card:nth-child(2) { animation-delay: 0.2s; }
+.day-card:nth-child(3) { animation-delay: 0.3s; }
+.day-card:nth-child(4) { animation-delay: 0.4s; }
+.day-card:nth-child(5) { animation-delay: 0.5s; }
+.day-card:nth-child(6) { animation-delay: 0.6s; }
+.day-card:nth-child(7) { animation-delay: 0.7s; }

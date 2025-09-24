@@ -1,0 +1,225 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.timer-circle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-circle {
+  transform: rotate(-90deg);
+}
+
+.timer-progress {
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.timer-time {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timer-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.timer-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-timer {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 rgba(116, 75, 162, 0.3);
+  min-width: 100px;
+}
+
+.btn-timer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(116, 75, 162, 0.4);
+}
+
+.btn-timer:active {
+  transform: translateY(0);
+}
+
+.btn-pause {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 15px 0 rgba(245, 87, 108, 0.3);
+}
+
+.btn-pause:hover {
+  box-shadow: 0 6px 20px 0 rgba(245, 87, 108, 0.4);
+}
+
+.btn-play {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 4px 15px 0 rgba(79, 172, 254, 0.3);
+}
+
+.btn-play:hover {
+  box-shadow: 0 6px 20px 0 rgba(79, 172, 254, 0.4);
+}
+
+.btn-reset {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #333;
+  box-shadow: 0 4px 15px 0 rgba(252, 182, 159, 0.3);
+}
+
+.btn-reset:hover {
+  box-shadow: 0 6px 20px 0 rgba(252, 182, 159, 0.4);
+}
+
+.timer-completed {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px 0 rgba(168, 237, 234, 0.3);
+}
+
+/* Pulse animation for timer when time is running low */
+.animate-timer-pulse {
+  animation: timerPulse 1s ease-in-out infinite;
+}
+
+@keyframes timerPulse {
+  0%, 100% {
+    transform: scale(1);
+    color: white;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #ff6b6b;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .timer-container {
+    padding: 18px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timer-container {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .timer-circle-container svg {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .timer-time {
+    font-size: 1.6rem;
+  }
+  
+  .timer-label {
+    font-size: 0.75rem;
+  }
+  
+  .btn-timer {
+    padding: 8px 15px;
+    font-size: 12px;
+    min-width: 85px;
+  }
+  
+  .timer-completed {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-container {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .timer-circle-container svg {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .timer-time {
+    font-size: 1.4rem;
+  }
+  
+  .timer-label {
+    font-size: 0.65rem;
+  }
+  
+  .timer-controls {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-timer {
+    padding: 6px 12px;
+    font-size: 11px;
+    min-width: 75px;
+  }
+  
+  .timer-completed {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .timer-circle-container svg {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .timer-time {
+    font-size: 1.2rem;
+  }
+  
+  .timer-label {
+    font-size: 0.6rem;
+  }
+  
+  .btn-timer {
+    padding: 5px 10px;
+    font-size: 10px;
+    min-width: 65px;
+  }
+}

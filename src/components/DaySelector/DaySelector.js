@@ -2,14 +2,29 @@ import React from 'react';
 import './DaySelector.css';
 import { DAYS_OF_WEEK, REST_DAYS } from '../../utils/constants';
 import { exercisePrograms, dayKeys } from '../../data/exercises';
+import useAudio from '../../hooks/useAudio';
 
 const DaySelector = ({ onDaySelect, onSpecialProgramsSelect, selectedDay }) => {
+  const { playClickSound, speak } = useAudio();
+
   const handleDayClick = (day) => {
+    playClickSound();
     const dayKey = dayKeys[day];
+    const program = exercisePrograms[dayKey];
+    
+    // Konuşma ile bilgilendirme
+    if (program?.type === 'rest') {
+      speak(`${day} dinlenme günü. Vücudunu dinlendir ve yarın için hazırlan.`);
+    } else {
+      speak(`${day} seçildi. ${program?.title} antrenmanına başlıyoruz!`);
+    }
+    
     onDaySelect(dayKey);
   };
 
   const handleSpecialProgramsClick = () => {
+    playClickSound();
+    speak("Özel programlar açılıyor. Seviyeni seç ve antrenmanına başla!");
     onSpecialProgramsSelect();
   };
 

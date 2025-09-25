@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ExercisePlayer.css';
 import ExerciseCard from '../ExerciseCard/ExerciseCard';
 import { WORKOUT_TYPES } from '../../utils/constants';
+import useAudio from '../../hooks/useAudio';
 
 const ExercisePlayer = ({
     day,
@@ -13,6 +14,8 @@ const ExercisePlayer = ({
     dayProgram
 }) => {
     const [isCompleted, setIsCompleted] = useState(false);
+    const [hasStarted, setHasStarted] = useState(false);
+    const { playClickSound, playSuccessSound, speak, speakMotivation } = useAudio();
 
     // Check if it's a rest day
     const isRestDay = dayProgram?.type === WORKOUT_TYPES.REST;
@@ -21,10 +24,36 @@ const ExercisePlayer = ({
     useEffect(() => {
         if (!isRestDay && currentExercise >= exercises.length && exercises.length > 0) {
             setIsCompleted(true);
+            playSuccessSound();
+            speakMotivation('complete');
         }
-    }, [currentExercise, exercises.length, isRestDay]);
+    }, [currentExercise, exercises.length, isRestDay, playSuccessSound, speakMotivation]);
+
+    // Başlangıç konuşması
+    useEffect(() => {
+        if (!hasStarted && exercises.length > 0 && !isRestDay) {
+            setHasStarted(true);
+            setTimeout(() => {
+                speakMotivation('start');
+                if (exercises[0]) {
+                    speak(`İlk egzersizimiz: ${exercises[0].name}. Hazır olduğunda başlayabilirsin!`);
+                }
+            }, 1000);
+        }
+    }, [exercises, hasStarted, isRestDay, speak, speakMotivation]);
+
+    // Egzersiz değiştiğinde konuşma
+    useEffect(() => {
+        if (hasStarted && currentExercise > 0 && exercises[currentExercise] && !isCompleted) {
+            setTimeout(() => {
+                speakMotivation('exercise');
+                speak(`Sıradaki egzersiz: ${exercises[currentExercise].name}`);
+            }, 500);
+        }
+    }, [currentExercise, exercises, hasStarted, isCompleted, speak, speakMotivation]);
 
     const handleNextExercise = () => {
+        playClickSound();
         if (currentExercise < exercises.length - 1) {
             setCurrentExercise(currentExercise + 1);
         } else {
@@ -33,12 +62,23 @@ const ExercisePlayer = ({
     };
 
     const handleSkipExercise = () => {
+        playClickSound();
+        speak("Egzersiz atlandı. Sıradakine geçiyoruz.");
         handleNextExercise();
     };
 
     const handleRestartWorkout = () => {
+        playClickSound();
+        speak("Antrenman yeniden başlatılıyor. Harika motivasyon!");
         setCurrentExercise(0);
         setIsCompleted(false);
+        setHasStarted(false);
+    };
+
+    const handleBackClick = () => {
+        playClickSound();
+        speak("Ana menüye dönülüyor.");
+        onBackToMenu();
     };
 
     const getProgressPercentage = () => {
@@ -69,7 +109,7 @@ const ExercisePlayer = ({
                         </div>
                         <button
                             className="btn-primary back-btn"
-                            onClick={onBackToMenu}
+                            onClick={handleBackClick}
                         >
                             🏠 Ana Menüye Dön
                         </button>
@@ -109,7 +149,7 @@ const ExercisePlayer = ({
                             </button>
                             <button
                                 className="btn-primary back-btn"
-                                onClick={onBackToMenu}
+                                onClick={handleBackClick}
                             >
                                 🏠 Ana Menüye Dön
                             </button>
@@ -127,7 +167,7 @@ const ExercisePlayer = ({
             <div className="player-header">
                 <button
                     className="back-button"
-                    onClick={onBackToMenu}
+                    onClick={handleBackClick}
                     aria-label="Ana menüye geri dön"
                 >
                     ← Geri

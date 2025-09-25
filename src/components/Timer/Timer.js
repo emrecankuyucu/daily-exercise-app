@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Timer.css';
 import useTimer from '../../hooks/useTimer';
+import useAudio from '../../hooks/useAudio';
 
 const Timer = ({ duration, onComplete, isActive, autoStart = false }) => {
   const {
@@ -15,6 +16,8 @@ const Timer = ({ duration, onComplete, isActive, autoStart = false }) => {
     formatTime,
     getProgress
   } = useTimer(duration, onComplete);
+  
+  const { playClickSound, playTimerEndSound, speakMotivation } = useAudio();
 
   // Auto start timer when component mounts or when isActive becomes true
   React.useEffect(() => {
@@ -28,7 +31,25 @@ const Timer = ({ duration, onComplete, isActive, autoStart = false }) => {
     resetTimer(duration);
   }, [duration, resetTimer]);
 
+  // Timer bitiş sesi ve motivasyon
+  useEffect(() => {
+    if (isCompleted) {
+      playTimerEndSound();
+      setTimeout(() => {
+        speakMotivation('timer');
+      }, 500);
+    }
+  }, [isCompleted, playTimerEndSound, speakMotivation]);
+
+  // Son 10 saniye uyarısı
+  useEffect(() => {
+    if (timerIsActive && timeRemaining === 10) {
+      speakMotivation('timer');
+    }
+  }, [timeRemaining, timerIsActive, speakMotivation]);
+
   const handleToggleTimer = () => {
+    playClickSound();
     if (timerIsActive) {
       pauseTimer();
     } else if (isPaused) {
@@ -39,6 +60,7 @@ const Timer = ({ duration, onComplete, isActive, autoStart = false }) => {
   };
 
   const handleResetTimer = () => {
+    playClickSound();
     resetTimer(duration);
   };
 

@@ -3,13 +3,30 @@ import './ExerciseCard.css';
 import Timer from '../Timer/Timer';
 import { EXERCISE_TYPES } from '../../utils/constants';
 import * as Icons from 'react-icons/gi';
+import useAudio from '../../hooks/useAudio';
 
 const ExerciseCard = ({ exercise, onNext, onSkip, isActive }) => {
+  const { playClickSound, playSuccessSound, speak } = useAudio();
+
   const handleTimerComplete = () => {
+    playSuccessSound();
+    speak("Süre doldu! Harika iş çıkardın!");
     // Auto advance when timer completes
     setTimeout(() => {
       onNext();
     }, 1000); // Small delay to show completion
+  };
+
+  const handleNextClick = () => {
+    playClickSound();
+    speak("Egzersiz tamamlandı! Bir sonrakine geçiyoruz.");
+    onNext();
+  };
+
+  const handleSkipClick = () => {
+    playClickSound();
+    speak("Egzersiz atlandı.");
+    onSkip();
   };
 
   const getExerciseIcon = (iconName) => {
@@ -96,7 +113,7 @@ const ExerciseCard = ({ exercise, onNext, onSkip, isActive }) => {
       <div className="exercise-actions">
         <button 
           className="btn-secondary action-btn skip-btn" 
-          onClick={onSkip}
+          onClick={handleSkipClick}
           aria-label="Bu egzersizi atla ve sonrakine geç"
         >
           ⏭️ Atla
@@ -104,7 +121,7 @@ const ExerciseCard = ({ exercise, onNext, onSkip, isActive }) => {
         
         <button 
           className="btn-success action-btn complete-btn" 
-          onClick={onNext}
+          onClick={handleNextClick}
           aria-label="Bu egzersizi tamamla ve sonrakine geç"
         >
           ✅ Tamamlandı

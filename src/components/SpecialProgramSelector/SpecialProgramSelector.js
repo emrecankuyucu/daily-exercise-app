@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './SpecialProgramSelector.css';
 import { specialPrograms } from '../../data/specialPrograms';
+import useAudio from '../../hooks/useAudio';
 
 const SpecialProgramSelector = ({ onProgramSelect, onBackToMenu }) => {
   const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
+  const { playClickSound, speak } = useAudio();
 
   const difficulties = {
     easy: { name: 'Kolay', color: 'easy', icon: '🌱' },
@@ -12,7 +14,28 @@ const SpecialProgramSelector = ({ onProgramSelect, onBackToMenu }) => {
   };
 
   const handleProgramSelect = (program) => {
-    onProgramSelect(program);
+    playClickSound();
+    speak(`${program.name} programı seçildi. ${program.difficulty} seviye, ${program.duration} sürecek. Hazır mısın?`);
+    setTimeout(() => {
+      onProgramSelect(program);
+    }, 1000);
+  };
+
+  const handleDifficultyChange = (difficulty) => {
+    playClickSound();
+    const difficultyNames = {
+      easy: 'Kolay',
+      medium: 'Orta', 
+      hard: 'Zor'
+    };
+    speak(`${difficultyNames[difficulty]} seviye seçildi.`);
+    setSelectedDifficulty(difficulty);
+  };
+
+  const handleBackClick = () => {
+    playClickSound();
+    speak("Ana menüye dönülüyor.");
+    onBackToMenu();
   };
 
   return (
@@ -20,7 +43,7 @@ const SpecialProgramSelector = ({ onProgramSelect, onBackToMenu }) => {
       <div className="selector-header">
         <button 
           className="back-button"
-          onClick={onBackToMenu}
+          onClick={handleBackClick}
           aria-label="Ana menüye geri dön"
         >
           ← Geri
@@ -35,7 +58,7 @@ const SpecialProgramSelector = ({ onProgramSelect, onBackToMenu }) => {
           <button
             key={key}
             className={`difficulty-btn ${selectedDifficulty === key ? 'active' : ''} ${diff.color}`}
-            onClick={() => setSelectedDifficulty(key)}
+            onClick={() => handleDifficultyChange(key)}
           >
             <span className="difficulty-icon">{diff.icon}</span>
             <span className="difficulty-name">{diff.name}</span>

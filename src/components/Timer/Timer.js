@@ -20,16 +20,18 @@ const Timer = ({ duration, onComplete, isActive, autoStart = false }) => {
   const { playClickSound, playTimerEndSound, speakMotivation } = useAudio();
 
   // Auto start timer when component mounts or when isActive becomes true
-  React.useEffect(() => {
-    if (autoStart && isActive && !timerIsActive && !isCompleted) {
+  useEffect(() => {
+    if (autoStart && isActive && !timerIsActive && !isCompleted && timeRemaining > 0) {
       startTimer();
     }
-  }, [autoStart, isActive, timerIsActive, isCompleted, startTimer]);
+  }, [autoStart, isActive, timerIsActive, isCompleted, startTimer, timeRemaining]);
 
   // Reset timer when duration changes
-  React.useEffect(() => {
-    resetTimer(duration);
-  }, [duration, resetTimer]);
+  useEffect(() => {
+    if (duration !== timeRemaining && !timerIsActive) {
+      resetTimer(duration);
+    }
+  }, [duration, resetTimer, timeRemaining, timerIsActive]);
 
   // Timer bitiş sesi ve motivasyon
   useEffect(() => {

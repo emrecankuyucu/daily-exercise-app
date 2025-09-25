@@ -39,74 +39,74 @@ export const specialPrograms = {
           instructions: ['Ayakta dur', 'Dizleri sırayla göğse kaldır', 'Dengeyi koru']
         },
         {
-          id: 'side_steps',
-          name: 'Yana Adım',
+          id: 'step_touch',
+          name: 'Step Touch',
           description: 'Sağa sola adım atarak hareket edin',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Bacak', 'Kalça'],
+          type: 'timed',
+          duration: 45,
+          targetMuscles: ['Bacak', 'Kardiyo'],
           icon: 'GiFootsteps',
-          instructions: ['Sağa bir adım at', 'Diğer ayağı yanına getir', 'Sola tekrarla']
+          instructions: ['Sağa bir adım at', 'Sola bir adım at', 'Ritim tut']
         },
         {
-          id: 'shoulder_rolls',
-          name: 'Omuz Çevirme',
-          description: 'Omuzları daire şeklinde çevirin',
+          id: 'wall_pushup',
+          name: 'Duvara Şınav',
+          description: 'Duvara yaslanarak hafif şınav yapın',
           type: 'reps',
-          reps: 10,
-          targetMuscles: ['Omuz', 'Boyun'],
-          icon: 'GiShoulderArmor',
-          instructions: ['Omuzları yukarı kaldır', 'Geriye doğru çevir', 'Yavaş ve kontrollü']
+          reps: 8,
+          targetMuscles: ['Göğüs', 'Kol'],
+          icon: 'GiMuscleUp',
+          instructions: ['Duvara yaslan', 'Kolları bükerek yaklaş', 'Geri it']
         },
         {
           id: 'heel_raises',
           name: 'Topuk Kaldırma',
-          description: 'Parmak ucuna yükselip inme',
+          description: 'Parmak ucuna yükselerek baldır çalıştırın',
           type: 'reps',
-          reps: 15,
+          reps: 12,
           targetMuscles: ['Baldır'],
           icon: 'GiFoot',
           instructions: ['Ayakta dur', 'Parmak ucuna yüksel', 'Yavaşça in']
         },
         {
-          id: 'gentle_twist',
-          name: 'Hafif Bel Çevirme',
-          description: 'Bel bölgesini sağa sola çevirme',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Bel', 'Yan karın'],
-          icon: 'GiTwister',
-          instructions: ['Ayakta dur', 'Elleri kalçada', 'Beli sağa sola çevir']
-        },
-        {
-          id: 'arm_swings',
-          name: 'Kol Sallama',
-          description: 'Kolları ileri geri sallama',
+          id: 'seated_twist',
+          name: 'Oturarak Dönüş',
+          description: 'Sandalyede oturarak gövdeyi çevirin',
           type: 'reps',
           reps: 10,
-          targetMuscles: ['Omuz', 'Kol'],
-          icon: 'GiArm',
-          instructions: ['Kolları yanında sallamaya başla', 'İleri geri hareket ettir', 'Doğal ritim koru']
+          targetMuscles: ['Karın', 'Bel'],
+          icon: 'GiTwister',
+          instructions: ['Sandalyede otur', 'Gövdeyi sağa sola çevir', 'Yavaş hareket et']
         },
         {
           id: 'ankle_circles',
           name: 'Ayak Bileği Çevirme',
-          description: 'Ayak bileklerini çevirme',
+          description: 'Ayak bileklerini daire şeklinde çevirin',
           type: 'reps',
           reps: 8,
-          targetMuscles: ['Ayak', 'Baldır'],
+          targetMuscles: ['Ayak bileği'],
           icon: 'GiFoot',
           instructions: ['Bir ayağı kaldır', 'Daire şeklinde çevir', 'Diğer ayakla tekrarla']
         },
         {
-          id: 'deep_breathing',
-          name: 'Derin Nefes',
-          description: 'Derin nefes alma egzersizi',
+          id: 'shoulder_rolls',
+          name: 'Omuz Çevirme',
+          description: 'Omuzları geriye doğru çevirin',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Omuz'],
+          icon: 'GiShoulderArmor',
+          instructions: ['Omuzları yukarı kaldır', 'Geriye doğru çevir', 'Yavaş ve kontrollü']
+        },
+        {
+          id: 'gentle_stretch',
+          name: 'Hafif Germe',
+          description: 'Tüm vücudu hafifçe gerin',
           type: 'timed',
-          duration: 60,
-          targetMuscles: ['Akciğer', 'Rahatlama'],
-          icon: 'GiLungs',
-          instructions: ['Rahat otur', '4 sayarak nefes al', '4 sayarak nefes ver']
+          duration: 30,
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiStretching',
+          instructions: ['Kolları yukarı uzat', 'Yanlara eğil', 'Nefes al']
         }
       ]
     },
@@ -114,108 +114,108 @@ export const specialPrograms = {
       id: 'easy_2',
       name: 'Esneklik ve Denge',
       difficulty: 'Kolay',
-      duration: '18 dakika',
+      duration: '15 dakika',
       description: 'Esneklik ve denge geliştirici hareketler',
       exercises: [
         {
-          id: 'cat_cow',
-          name: 'Kedi-İnek Pozu',
-          description: 'Dört ayak üzerinde omurga hareketleri',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Sırt', 'Core'],
-          icon: 'GiCat',
-          instructions: ['Dört ayak üzerine çök', 'Sırtını yukarı kaldır (kedi)', 'Sırtını aşağı indir (inek)']
-        },
-        {
-          id: 'child_pose',
-          name: 'Çocuk Pozu',
-          description: 'Rahatlatıcı yoga pozu',
-          type: 'timed',
-          duration: 30,
-          targetMuscles: ['Sırt', 'Kalça'],
-          icon: 'GiMeditation',
-          instructions: ['Dizlerin üzerine otur', 'Kolları öne uzat', 'Alnını yere değdir']
-        },
-        {
-          id: 'standing_forward_fold',
-          name: 'Öne Eğilme',
-          description: 'Ayakta öne doğru eğilme',
+          id: 'balance_stand',
+          name: 'Tek Ayak Durma',
+          description: 'Tek ayak üzerinde denge kurun',
           type: 'timed',
           duration: 20,
-          targetMuscles: ['Arka bacak', 'Sırt'],
-          icon: 'GiTouchingHands',
-          instructions: ['Ayakta dur', 'Yavaşça öne eğil', 'Elleri yere doğru uzat']
-        },
-        {
-          id: 'tree_pose',
-          name: 'Ağaç Pozu',
-          description: 'Tek ayak üzerinde denge',
-          type: 'timed',
-          duration: 15,
-          targetMuscles: ['Denge', 'Bacak'],
-          icon: 'GiTree',
-          instructions: ['Bir ayak üzerinde dur', 'Diğer ayağı dizin yanına koy', 'Dengeyi koru']
+          targetMuscles: ['Denge', 'Core'],
+          icon: 'GiBalancing',
+          instructions: ['Bir ayağı kaldır', 'Dengeyi koru', 'Sabit dur']
         },
         {
           id: 'neck_stretch',
           name: 'Boyun Germe',
-          description: 'Boyun kaslarını germe',
+          description: 'Boyun kaslarını gerin',
+          type: 'timed',
+          duration: 15,
+          targetMuscles: ['Boyun'],
+          icon: 'GiNeck',
+          instructions: ['Başı sağa eğ', 'Sola eğ', 'Yavaş hareket et']
+        },
+        {
+          id: 'arm_stretch',
+          name: 'Kol Germe',
+          description: 'Kol kaslarını gerin',
           type: 'timed',
           duration: 20,
-          targetMuscles: ['Boyun', 'Omuz'],
-          icon: 'GiNeck',
-          instructions: ['Başı sağa eğ', '20 saniye bekle', 'Sola tekrarla']
+          targetMuscles: ['Kol', 'Omuz'],
+          icon: 'GiArm',
+          instructions: ['Kolu karşıya uzat', 'Diğer elle çek', 'Her iki kol için tekrarla']
+        },
+        {
+          id: 'leg_swing',
+          name: 'Bacak Sallama',
+          description: 'Bacağı öne arkaya sallayın',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Bacak', 'Kalça'],
+          icon: 'GiLeg',
+          instructions: ['Duvara yaslan', 'Bacağı öne arkaya salla', 'Her iki bacak için yap']
+        },
+        {
+          id: 'cat_cow',
+          name: 'Kedi-İnek Pozu',
+          description: 'Dört ayak üzerinde sırt hareketleri',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Sırt', 'Bel'],
+          icon: 'GiCat',
+          instructions: ['Dört ayak üzerine çök', 'Sırtı yukarı kaldır', 'Aşağı indir']
+        },
+        {
+          id: 'side_bend',
+          name: 'Yana Eğilme',
+          description: 'Gövdeyi yanlara eğin',
+          type: 'reps',
+          reps: 6,
+          targetMuscles: ['Yan karın', 'Bel'],
+          icon: 'GiTwister',
+          instructions: ['Ayakta dur', 'Sağa eğil', 'Sola eğil']
+        },
+        {
+          id: 'toe_touch',
+          name: 'Parmak Ucu Dokunma',
+          description: 'Öne eğilerek parmak uçlarına dokunun',
+          type: 'reps',
+          reps: 5,
+          targetMuscles: ['Arka bacak', 'Bel'],
+          icon: 'GiTouchingHands',
+          instructions: ['Ayakta dur', 'Öne eğil', 'Parmak uçlarına dokun']
         },
         {
           id: 'hip_circles',
           name: 'Kalça Çevirme',
-          description: 'Kalçaları daire şeklinde çevirme',
+          description: 'Kalçaları daire şeklinde çevirin',
           type: 'reps',
           reps: 8,
-          targetMuscles: ['Kalça', 'Core'],
+          targetMuscles: ['Kalça'],
           icon: 'GiPelvis',
-          instructions: ['Ayakta dur', 'Elleri kalçada', 'Kalçaları çevir']
+          instructions: ['Eller belde', 'Kalçaları çevir', 'Her iki yöne yap']
         },
         {
-          id: 'seated_spinal_twist',
-          name: 'Oturarak Omurga Çevirme',
-          description: 'Oturarak bel bölgesini çevirme',
+          id: 'deep_breathing',
+          name: 'Derin Nefes',
+          description: 'Derin nefes alıp verin',
+          type: 'timed',
+          duration: 30,
+          targetMuscles: ['Akciğer'],
+          icon: 'GiLungs',
+          instructions: ['Derin nefes al', 'Yavaşça ver', 'Rahatla']
+        },
+        {
+          id: 'gentle_twist',
+          name: 'Hafif Dönüş',
+          description: 'Oturarak hafifçe dönün',
           type: 'reps',
           reps: 6,
-          targetMuscles: ['Bel', 'Yan karın'],
+          targetMuscles: ['Bel', 'Karın'],
           icon: 'GiTwister',
-          instructions: ['Yerde otur', 'Bacakları uzat', 'Beli sağa sola çevir']
-        },
-        {
-          id: 'shoulder_blade_squeeze',
-          name: 'Kürek Kemiği Sıkma',
-          description: 'Kürek kemiklerini birbirine yaklaştırma',
-          type: 'reps',
-          reps: 10,
-          targetMuscles: ['Sırt', 'Omuz'],
-          icon: 'GiShoulderArmor',
-          instructions: ['Ayakta dur', 'Kürek kemiklerini sık', 'Göğsü öne çıkar']
-        },
-        {
-          id: 'calf_stretch',
-          name: 'Baldır Germe',
-          description: 'Baldır kaslarını germe',
-          type: 'timed',
-          duration: 20,
-          targetMuscles: ['Baldır', 'Arka bacak'],
-          icon: 'GiLeg',
-          instructions: ['Duvara yaslan', 'Bir ayağı geriye at', 'Baldırı ger']
-        },
-        {
-          id: 'gentle_backbend',
-          name: 'Hafif Geriye Eğilme',
-          description: 'Sırtı hafifçe geriye eğme',
-          type: 'reps',
-          reps: 5,
-          targetMuscles: ['Sırt', 'Göğüs'],
-          icon: 'GiBackwardTime',
-          instructions: ['Ayakta dur', 'Elleri belde', 'Hafifçe geriye eğil']
+          instructions: ['Yerde otur', 'Sağa dön', 'Sola dön']
         }
       ]
     },
@@ -223,98 +223,108 @@ export const specialPrograms = {
       id: 'easy_3',
       name: 'Hafif Kuvvet',
       difficulty: 'Kolay',
-      duration: '16 dakika',
-      description: 'Temel kuvvet hareketleri',
+      duration: '18 dakika',
+      description: 'Temel kuvvet geliştirici hareketler',
       exercises: [
         {
-          id: 'wall_pushup',
-          name: 'Duvar Şınavı',
-          description: 'Duvara karşı şınav hareketi',
-          type: 'reps',
-          reps: 10,
-          targetMuscles: ['Göğüs', 'Kol'],
-          icon: 'GiMuscleUp',
-          instructions: ['Duvara karşı dur', 'Elleri duvara koy', 'İleri geri hareket et']
-        },
-        {
-          id: 'chair_squat',
-          name: 'Sandalye Squat',
-          description: 'Sandalyeye oturup kalkma',
-          type: 'reps',
-          reps: 8,
+          id: 'wall_sit',
+          name: 'Duvara Oturma',
+          description: 'Duvara yaslanarak squat pozisyonunda durun',
+          type: 'timed',
+          duration: 20,
           targetMuscles: ['Bacak', 'Kalça'],
-          icon: 'GiChair',
-          instructions: ['Sandalyenin önünde dur', 'Yavaşça otur', 'Yavaşça kalk']
+          icon: 'GiLeg',
+          instructions: ['Duvara yaslan', 'Squat pozisyonuna geç', 'Pozisyonu koru']
         },
         {
           id: 'modified_plank',
           name: 'Dizüstü Plank',
           description: 'Dizler yerde plank pozisyonu',
           type: 'timed',
-          duration: 20,
-          targetMuscles: ['Core', 'Karın'],
+          duration: 25,
+          targetMuscles: ['Core', 'Kol'],
           icon: 'GiAbdominalArmor',
-          instructions: ['Dizler ve ön kollar yerde', 'Vücudu düz tut', 'Nefes almaya devam et']
+          instructions: ['Dizler yerde', 'Eller omuz altında', 'Vücut düz']
         },
         {
-          id: 'assisted_squat',
-          name: 'Destekli Squat',
-          description: 'Sandalyeye tutunarak squat',
+          id: 'chair_dips',
+          name: 'Sandalye Dips',
+          description: 'Sandalye kenarında kol çalışması',
           type: 'reps',
-          reps: 10,
-          targetMuscles: ['Bacak', 'Kalça'],
-          icon: 'GiLeg',
-          instructions: ['Sandalyeye tutun', 'Squat pozisyonuna in', 'Yavaşça kalk']
+          reps: 6,
+          targetMuscles: ['Arka kol', 'Omuz'],
+          icon: 'GiStrongMan',
+          instructions: ['Sandalye kenarına otur', 'Eller kenarda', 'Yukarı aşağı hareket']
         },
         {
-          id: 'seated_leg_extension',
-          name: 'Oturarak Bacak Uzatma',
-          description: 'Sandalyede bacak uzatma',
+          id: 'standing_calf',
+          name: 'Ayakta Baldır',
+          description: 'Ayakta baldır kaldırma',
           type: 'reps',
-          reps: 8,
-          targetMuscles: ['Ön bacak'],
-          icon: 'GiLeg',
-          instructions: ['Sandalyede otur', 'Bacağı düz uzat', 'Yavaşça indir']
-        },
-        {
-          id: 'wall_sit_easy',
-          name: 'Kolay Duvar Oturma',
-          description: 'Kısa süreli duvar oturma',
-          type: 'timed',
-          duration: 15,
-          targetMuscles: ['Bacak', 'Kalça'],
-          icon: 'GiChair',
-          instructions: ['Duvara yaslan', 'Hafif çömel', 'Pozisyonu koru']
+          reps: 15,
+          targetMuscles: ['Baldır'],
+          icon: 'GiFoot',
+          instructions: ['Ayakta dur', 'Parmak ucuna yüksel', 'Kontrollü in']
         },
         {
           id: 'arm_raises',
           name: 'Kol Kaldırma',
-          description: 'Kolları yukarı kaldırma',
+          description: 'Kolları yanlara kaldırın',
           type: 'reps',
           reps: 10,
-          targetMuscles: ['Omuz', 'Kol'],
+          targetMuscles: ['Omuz'],
           icon: 'GiArm',
-          instructions: ['Kolları yanlarda', 'Yukarı kaldır', 'Yavaşça indir']
+          instructions: ['Kollar yanda', 'Omuz hizasına kaldır', 'Yavaş indir']
         },
         {
-          id: 'calf_raise_easy',
-          name: 'Kolay Baldır Kaldırma',
-          description: 'Destekli baldır kaldırma',
+          id: 'mini_squats',
+          name: 'Mini Squat',
+          description: 'Yarım squat hareketi',
           type: 'reps',
           reps: 12,
-          targetMuscles: ['Baldır'],
-          icon: 'GiFoot',
-          instructions: ['Duvara yaslan', 'Parmak ucuna yüksel', 'Yavaşça in']
+          targetMuscles: ['Bacak', 'Kalça'],
+          icon: 'GiLeg',
+          instructions: ['Ayaklar omuz genişliği', 'Yarım squat', 'Kontrollü hareket']
         },
         {
-          id: 'gentle_core',
-          name: 'Hafif Karın',
-          description: 'Kolay karın egzersizi',
+          id: 'table_pushup',
+          name: 'Masa Şınavı',
+          description: 'Masaya yaslanarak şınav',
           type: 'reps',
-          reps: 6,
+          reps: 8,
+          targetMuscles: ['Göğüs', 'Kol'],
+          icon: 'GiMuscleUp',
+          instructions: ['Masaya yaslan', 'Şınav hareketi', 'Kontrollü git gel']
+        },
+        {
+          id: 'leg_extensions',
+          name: 'Bacak Uzatma',
+          description: 'Oturarak bacak uzatma',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Ön bacak'],
+          icon: 'GiLeg',
+          instructions: ['Sandalyede otur', 'Bacağı uzat', 'Her iki bacak']
+        },
+        {
+          id: 'gentle_crunch',
+          name: 'Hafif Mekik',
+          description: 'Yavaş karın hareketi',
+          type: 'reps',
+          reps: 8,
           targetMuscles: ['Karın'],
           icon: 'GiAbdominalArmor',
-          instructions: ['Sırtüstü yat', 'Başı hafif kaldır', 'Yavaşça indir']
+          instructions: ['Sırtüstü yat', 'Hafif kaldır', 'Yavaş hareket']
+        },
+        {
+          id: 'back_extension',
+          name: 'Sırt Uzatma',
+          description: 'Yüzüstü sırt kaldırma',
+          type: 'reps',
+          reps: 6,
+          targetMuscles: ['Sırt'],
+          icon: 'GiBackPain',
+          instructions: ['Yüzüstü yat', 'Göğsü kaldır', 'Yavaş indir']
         }
       ]
     },
@@ -323,97 +333,107 @@ export const specialPrograms = {
       name: 'Sabah Aktivasyonu',
       difficulty: 'Kolay',
       duration: '12 dakika',
-      description: 'Güne başlamak için hafif hareketler',
+      description: 'Güne başlangıç için enerji verici hareketler',
       exercises: [
         {
           id: 'morning_stretch',
           name: 'Sabah Germe',
-          description: 'Kolları yukarı uzatarak germe',
+          description: 'Tüm vücudu uyandıran germe',
           type: 'timed',
           duration: 30,
           targetMuscles: ['Tüm vücut'],
-          icon: 'GiArm',
-          instructions: ['Kolları yukarı uzat', 'Vücudu ger', 'Derin nefes al']
+          icon: 'GiStretching',
+          instructions: ['Kolları yukarı uzat', 'Yanlara eğil', 'Derin nefes al']
         },
         {
-          id: 'shoulder_rolls',
-          name: 'Omuz Çevirme',
-          description: 'Omuzları daire şeklinde çevirin',
-          type: 'reps',
-          reps: 10,
-          targetMuscles: ['Omuz', 'Boyun'],
-          icon: 'GiShoulderArmor',
-          instructions: ['Omuzları yukarı kaldır', 'Geriye doğru çevir', 'Yavaş ve kontrollü']
-        },
-        {
-          id: 'ankle_circles',
-          name: 'Ayak Bileği Çevirme',
-          description: 'Ayak bileklerini çevirin',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Ayak', 'Baldır'],
-          icon: 'GiFoot',
-          instructions: ['Bir ayağı kaldır', 'Daire şeklinde çevir', 'Diğer ayakla tekrarla']
-        },
-        {
-          id: 'gentle_twist_morning',
-          name: 'Sabah Bel Çevirme',
-          description: 'Hafif bel çevirme hareketi',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Bel', 'Yan karın'],
-          icon: 'GiTwister',
-          instructions: ['Ayakta dur', 'Beli sağa sola çevir', 'Yavaş hareket et']
-        },
-        {
-          id: 'knee_to_chest',
-          name: 'Diz Göğse',
-          description: 'Dizleri göğse çekme',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Kalça', 'Arka bacak'],
-          icon: 'GiLeg',
-          instructions: ['Ayakta dur', 'Dizi göğse çek', 'Alternatif hareket']
-        },
-        {
-          id: 'side_bend',
-          name: 'Yana Eğilme',
-          description: 'Vücudu yana eğme',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Yan karın', 'Bel'],
-          icon: 'GiTwister',
-          instructions: ['Kolu yukarı kaldır', 'Yana eğil', 'Diğer tarafa tekrarla']
-        },
-        {
-          id: 'wrist_circles',
-          name: 'Bilek Çevirme',
-          description: 'Bilekleri çevirme',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Bilek', 'Ön kol'],
-          icon: 'GiArm',
-          instructions: ['Kolları öne uzat', 'Bilekleri çevir', 'Her iki yöne']
-        },
-        {
-          id: 'head_nods',
-          name: 'Baş Sallama',
-          description: 'Başı yukarı aşağı sallama',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Boyun'],
-          icon: 'GiNeck',
-          instructions: ['Başı yukarı kaldır', 'Aşağı indir', 'Yavaş hareket et']
-        },
-        {
-          id: 'energizing_breath',
-          name: 'Enerji Verici Nefes',
-          description: 'Derin enerji nefesi',
+          id: 'wake_up_walk',
+          name: 'Uyanma Yürüyüşü',
+          description: 'Yerinde hafif yürüyüş',
           type: 'timed',
           duration: 45,
+          targetMuscles: ['Bacak', 'Kardiyo'],
+          icon: 'GiWalk',
+          instructions: ['Yerinde yürü', 'Kolları salla', 'Tempolu hareket']
+        },
+        {
+          id: 'sun_salutation',
+          name: 'Güneş Selamı',
+          description: 'Yoga tarzı açılış hareketi',
+          type: 'reps',
+          reps: 5,
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiSun',
+          instructions: ['Kollar yukarı', 'Öne eğil', 'Geri kalk']
+        },
+        {
+          id: 'energy_bounce',
+          name: 'Enerji Zıplaması',
+          description: 'Hafif zıplama hareketi',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Bacak', 'Kardiyo'],
+          icon: 'GiJumpAcross',
+          instructions: ['Hafif zıpla', 'Kolları hareket ettir', 'Ritim tut']
+        },
+        {
+          id: 'shoulder_wake',
+          name: 'Omuz Uyandırma',
+          description: 'Omuz kaslarını aktive etme',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Omuz'],
+          icon: 'GiShoulderArmor',
+          instructions: ['Omuzları yukarı', 'Geriye çevir', 'Rahatla']
+        },
+        {
+          id: 'spine_twist',
+          name: 'Omurga Dönüşü',
+          description: 'Omurgayı hareket ettirme',
+          type: 'reps',
+          reps: 6,
+          targetMuscles: ['Bel', 'Sırt'],
+          icon: 'GiTwister',
+          instructions: ['Ayakta dur', 'Sağa sola dön', 'Yavaş hareket']
+        },
+        {
+          id: 'ankle_prep',
+          name: 'Ayak Bileği Hazırlık',
+          description: 'Ayak bileklerini hazırlama',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Ayak bileği'],
+          icon: 'GiFoot',
+          instructions: ['Ayağı kaldır', 'Çember çiz', 'Her iki ayak']
+        },
+        {
+          id: 'gentle_march',
+          name: 'Hafif Marş',
+          description: 'Yerinde marş hareketi',
+          type: 'timed',
+          duration: 30,
+          targetMuscles: ['Bacak', 'Core'],
+          icon: 'GiWalk',
+          instructions: ['Yerinde marş', 'Dizleri kaldır', 'Kolları salla']
+        },
+        {
+          id: 'breath_energy',
+          name: 'Enerji Nefesi',
+          description: 'Enerji verici nefes egzersizi',
+          type: 'reps',
+          reps: 8,
           targetMuscles: ['Akciğer'],
           icon: 'GiLungs',
-          instructions: ['Derin nefes al', 'Enerji hisset', 'Güne hazırlan']
+          instructions: ['Derin nefes al', 'Hızlı ver', 'Enerji hisset']
+        },
+        {
+          id: 'morning_balance',
+          name: 'Sabah Dengesi',
+          description: 'Denge ve koordinasyon',
+          type: 'timed',
+          duration: 20,
+          targetMuscles: ['Denge', 'Core'],
+          icon: 'GiBalancing',
+          instructions: ['Tek ayak dur', 'Dengeyi koru', 'Sakin kal']
         }
       ]
     },
@@ -422,345 +442,220 @@ export const specialPrograms = {
       name: 'Nefes ve Rahatlama',
       difficulty: 'Kolay',
       duration: '15 dakika',
-      description: 'Nefes egzersizleri ve rahatlama',
+      description: 'Stres azaltıcı ve rahatlatıcı hareketler',
       exercises: [
         {
-          id: 'deep_breathing',
-          name: 'Derin Nefes',
-          description: 'Derin nefes alma egzersizi',
+          id: 'deep_breath_1',
+          name: 'Derin Nefes 1',
+          description: '4-4-4 nefes tekniği',
           type: 'timed',
           duration: 60,
-          targetMuscles: ['Akciğer', 'Rahatlama'],
+          targetMuscles: ['Akciğer'],
           icon: 'GiLungs',
-          instructions: ['Rahat otur', '4 sayarak nefes al', '4 sayarak nefes ver']
+          instructions: ['4 saniye nefes al', '4 saniye tut', '4 saniye ver']
         },
         {
-          id: 'neck_stretch',
-          name: 'Boyun Germe',
-          description: 'Boyun kaslarını germe',
+          id: 'neck_relax',
+          name: 'Boyun Rahatlama',
+          description: 'Boyun gerginliğini azaltma',
           type: 'timed',
-          duration: 20,
-          targetMuscles: ['Boyun', 'Omuz'],
+          duration: 30,
+          targetMuscles: ['Boyun'],
           icon: 'GiNeck',
-          instructions: ['Başı sağa eğ', '20 saniye bekle', 'Sola tekrarla']
-        },
-        {
-          id: 'box_breathing',
-          name: 'Kutu Nefesi',
-          description: '4-4-4-4 nefes tekniği',
-          type: 'timed',
-          duration: 60,
-          targetMuscles: ['Akciğer', 'Rahatlama'],
-          icon: 'GiLungs',
-          instructions: ['4 sayarak nefes al', '4 sayarak tut', '4 sayarak ver', '4 sayarak bekle']
+          instructions: ['Başı yavaş çevir', 'Her yöne eğ', 'Rahat hareket et']
         },
         {
           id: 'shoulder_release',
           name: 'Omuz Gevşetme',
           description: 'Omuz kaslarını gevşetme',
-          type: 'timed',
-          duration: 30,
-          targetMuscles: ['Omuz', 'Boyun'],
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Omuz'],
           icon: 'GiShoulderArmor',
-          instructions: ['Omuzları yukarı çek', 'Gerginliği hisset', 'Bırak ve gevşe']
+          instructions: ['Omuzları yukarı', 'Geriye çevir', 'Bırak']
         },
         {
-          id: 'progressive_relaxation',
-          name: 'Aşamalı Gevşeme',
-          description: 'Vücut kaslarını aşamalı gevşetme',
-          type: 'timed',
-          duration: 90,
-          targetMuscles: ['Tüm vücut', 'Rahatlama'],
-          icon: 'GiMeditation',
-          instructions: ['Ayak parmaklarından başla', 'Her kasını sık ve bırak', 'Yukarı doğru ilerle']
-        },
-        {
-          id: 'gentle_spinal_wave',
-          name: 'Hafif Omurga Dalgası',
-          description: 'Omurgayı dalga gibi hareket ettirme',
+          id: 'gentle_side_bend',
+          name: 'Hafif Yana Eğilme',
+          description: 'Yan kasları gevşetme',
           type: 'reps',
-          reps: 5,
-          targetMuscles: ['Sırt', 'Omurga'],
-          icon: 'GiSpinalCoil',
-          instructions: ['Oturarak başla', 'Omurgayı dalga gibi hareket ettir', 'Yavaş ve akıcı']
+          reps: 6,
+          targetMuscles: ['Yan karın', 'Bel'],
+          icon: 'GiTwister',
+          instructions: ['Sağa eğil', 'Sola eğil', 'Yavaş hareket']
         },
         {
-          id: 'eye_relaxation',
-          name: 'Göz Dinlendirme',
-          description: 'Göz kaslarını dinlendirme',
+          id: 'child_pose',
+          name: 'Çocuk Pozu',
+          description: 'Yoga rahatlatıcı pozisyon',
+          type: 'timed',
+          duration: 45,
+          targetMuscles: ['Sırt', 'Bel'],
+          icon: 'GiMeditation',
+          instructions: ['Dizler üzerine çök', 'Öne eğil', 'Kolları uzat']
+        },
+        {
+          id: 'leg_relax',
+          name: 'Bacak Rahatlama',
+          description: 'Bacak kaslarını gevşetme',
           type: 'timed',
           duration: 30,
-          targetMuscles: ['Göz', 'Yüz'],
-          icon: 'GiEyeball',
-          instructions: ['Gözleri kapat', 'Avuç içlerini gözlere koy', 'Karanlıkta dinlen']
+          targetMuscles: ['Bacak'],
+          icon: 'GiLeg',
+          instructions: ['Bacakları salla', 'Gevşet', 'Rahatla']
         },
         {
-          id: 'mindful_breathing',
-          name: 'Bilinçli Nefes',
-          description: 'Nefese odaklanma meditasyonu',
+          id: 'spinal_wave',
+          name: 'Omurga Dalgası',
+          description: 'Omurgayı yumuşak hareket ettirme',
+          type: 'reps',
+          reps: 5,
+          targetMuscles: ['Sırt', 'Bel'],
+          icon: 'GiSpinalCoil',
+          instructions: ['Yavaş öne eğil', 'Omurga omurga', 'Yavaş kalk']
+        },
+        {
+          id: 'palm_press',
+          name: 'Avuç İçi Basma',
+          description: 'El ve bilek gevşetme',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['El', 'Bilek'],
+          icon: 'GiHand',
+          instructions: ['Avuçları birleştir', 'Bas', 'Gevşet']
+        },
+        {
+          id: 'eye_rest',
+          name: 'Göz Dinlendirme',
+          description: 'Göz kaslarını rahatlatma',
           type: 'timed',
-          duration: 90,
-          targetMuscles: ['Zihin', 'Rahatlama'],
-          icon: 'GiMeditation',
-          instructions: ['Sadece nefesine odaklan', 'Düşünceleri gözlemle', 'Yargılamadan izle']
-        }
-      ]
-    },
-    {
-      id: 'easy_6',
-      name: 'Temel Mobilite',
-      difficulty: 'Kolay',
-      duration: '12 dakika',
-      description: 'Eklem mobilitesi geliştirici hareketler',
-      exercises: [
-        {
-          id: 'hip_circles',
-          name: 'Kalça Çevirme',
-          description: 'Kalçaları daire şeklinde çevirin',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Kalça', 'Core'],
-          icon: 'GiPelvis',
-          instructions: ['Ayakta dur', 'Elleri kalçada', 'Kalçaları çevir']
+          duration: 20,
+          targetMuscles: ['Göz'],
+          icon: 'GiEyeball',
+          instructions: ['Gözleri kapat', 'Rahatla', 'Derin nefes al']
         },
         {
-          id: 'toe_touches',
-          name: 'Ayak Parmağına Dokunma',
-          description: 'Öne eğilerek ayak parmaklarına dokunun',
-          type: 'reps',
-          reps: 5,
-          targetMuscles: ['Arka bacak', 'Sırt'],
-          icon: 'GiTouchingHands',
-          instructions: ['Ayakta dur', 'Yavaşça öne eğil', 'Ayak parmaklarına dokun']
-        }
-      ]
-    },
-    {
-      id: 'easy_7',
-      name: 'Hafif Karın',
-      difficulty: 'Kolay',
-      duration: '8 dakika',
-      description: 'Başlangıç seviyesi karın egzersizleri',
-      exercises: [
-        {
-          id: 'dead_bug',
-          name: 'Ölü Böcek',
-          description: 'Sırtüstü yatarak karşılıklı kol-bacak hareketi',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Karın', 'Core'],
-          icon: 'GiBug',
-          instructions: ['Sırtüstü yat', 'Kol ve karşı bacağı kaldır', 'Yavaşça değiştir']
-        },
-        {
-          id: 'pelvic_tilt',
-          name: 'Pelvik Eğim',
-          description: 'Pelvis bölgesini hareket ettirme',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Alt karın', 'Pelvis'],
-          icon: 'GiPelvis',
-          instructions: ['Sırtüstü yat', 'Dizleri bük', 'Pelvis bölgesini kaldır']
-        }
-      ]
-    },
-    {
-      id: 'easy_8',
-      name: 'Günlük Hareket',
-      difficulty: 'Kolay',
-      duration: '15 dakika',
-      description: 'Günlük yaşamda kullanılan hareketler',
-      exercises: [
-        {
-          id: 'sit_to_stand',
-          name: 'Otur-Kalk',
-          description: 'Sandalyeye oturup kalkma hareketi',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Bacak', 'Kalça'],
-          icon: 'GiChair',
-          instructions: ['Sandalyeye otur', 'Kolları göğüste kavuştur', 'Yavaşça kalk']
-        },
-        {
-          id: 'step_ups',
-          name: 'Basamak Çıkma',
-          description: 'Alçak basamağa çıkma hareketi',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Bacak', 'Denge'],
-          icon: 'GiStairs',
-          instructions: ['Basamağın önünde dur', 'Bir ayakla çık', 'Yavaşça in']
-        }
-      ]
-    },
-    {
-      id: 'easy_9',
-      name: 'Akşam Rahatlama',
-      difficulty: 'Kolay',
-      duration: '10 dakika',
-      description: 'Günün sonunda rahatlama egzersizleri',
-      exercises: [
-        {
-          id: 'gentle_twist',
-          name: 'Hafif Bel Çevirme',
-          description: 'Oturarak bel bölgesini çevirme',
-          type: 'reps',
-          reps: 5,
-          targetMuscles: ['Bel', 'Yan karın'],
-          icon: 'GiTwister',
-          instructions: ['Yerde otur', 'Bacakları uzat', 'Beli sağa sola çevir']
-        },
-        {
-          id: 'leg_elevation',
-          name: 'Bacak Yükseltme',
-          description: 'Bacakları yükselterek rahatlama',
+          id: 'final_relax',
+          name: 'Son Rahatlama',
+          description: 'Tüm vücudu gevşetme',
           type: 'timed',
           duration: 60,
-          targetMuscles: ['Bacak', 'Dolaşım'],
-          icon: 'GiLeg',
-          instructions: ['Sırtüstü yat', 'Bacakları duvara daya', 'Rahatla']
-        }
-      ]
-    },
-    {
-      id: 'easy_10',
-      name: 'Temel Denge',
-      difficulty: 'Kolay',
-      duration: '8 dakika',
-      description: 'Denge ve koordinasyon geliştirici',
-      exercises: [
-        {
-          id: 'single_leg_stand',
-          name: 'Tek Ayak Durma',
-          description: 'Tek ayak üzerinde durma',
-          type: 'timed',
-          duration: 15,
-          targetMuscles: ['Denge', 'Bacak'],
-          icon: 'GiBalancing',
-          instructions: ['Bir ayak üzerinde dur', 'Dengeyi koru', 'Diğer ayakla tekrarla']
-        },
-        {
-          id: 'heel_to_toe',
-          name: 'Topuk-Parmak Yürüyüş',
-          description: 'Düz çizgide yürüme',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Denge', 'Koordinasyon'],
-          icon: 'GiFootsteps',
-          instructions: ['Düz çizgi hayal et', 'Topuk parmağa değsin', 'Yavaş yürü']
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiMeditation',
+          instructions: ['Rahat pozisyon al', 'Tüm kasları gevşet', 'Sakin kal']
         }
       ]
     }
   ],
-
-  // ORTA SEVİYE (10 Program)
+  
+  // ORTA SEVİYE (5 Program)
   medium: [
     {
       id: 'medium_1',
       name: 'Kardiyo Blast',
       difficulty: 'Orta',
       duration: '25 dakika',
-      description: 'Orta tempo kardiyo antrenmanı',
+      description: 'Yoğun kardiyo antrenmanı',
       exercises: [
         {
           id: 'jumping_jacks',
           name: 'Jumping Jacks',
-          description: 'Zıplayarak kol bacak açma kapama',
-          type: 'reps',
-          reps: 20,
+          description: 'Zıplayarak kol bacak açma',
+          type: 'timed',
+          duration: 45,
           targetMuscles: ['Tüm vücut', 'Kardiyo'],
           icon: 'GiJumpAcross',
-          instructions: ['Ayakta dur', 'Zıplayarak bacakları aç', 'Kolları yukarı kaldır']
+          instructions: ['Zıpla kol bacak aç', 'Zıpla kol bacak kapat', 'Hızlı tempo']
         },
         {
           id: 'high_knees',
           name: 'Yüksek Diz',
           description: 'Dizleri yüksek kaldırarak koşma',
           type: 'timed',
-          duration: 45,
-          targetMuscles: ['Bacak', 'Kardiyo'],
-          icon: 'GiRunningShoe',
-          instructions: ['Yerinde koş', 'Dizleri yüksek kaldır', 'Hızlı tempoda']
-        },
-        {
-          id: 'butt_kicks',
-          name: 'Topuk Vuruş',
-          description: 'Topukları kalçaya vurma',
-          type: 'timed',
-          duration: 45,
-          targetMuscles: ['Arka bacak', 'Kardiyo'],
-          icon: 'GiLeg',
-          instructions: ['Yerinde koş', 'Topukları kalçaya vur', 'Hızlı hareket et']
-        },
-        {
-          id: 'step_touches',
-          name: 'Adım Dokunma',
-          description: 'Yana adım atıp dokunma',
-          type: 'reps',
-          reps: 16,
-          targetMuscles: ['Bacak', 'Kardiyo'],
-          icon: 'GiFootsteps',
-          instructions: ['Sağa adım at', 'Sol ayağı yanına getir', 'Sola tekrarla']
-        },
-        {
-          id: 'arm_circles_medium',
-          name: 'Hızlı Kol Çevirme',
-          description: 'Kolları hızlı çevirme',
-          type: 'timed',
           duration: 30,
-          targetMuscles: ['Omuz', 'Kol'],
-          icon: 'GiArm',
-          instructions: ['Kolları yanlara aç', 'Hızlı daireler çiz', 'İleri ve geri']
+          targetMuscles: ['Bacak', 'Kardiyo'],
+          icon: 'GiLeg',
+          instructions: ['Yerinde koş', 'Dizleri yüksek kaldır', 'Hızlı tempo']
         },
         {
-          id: 'side_shuffles',
-          name: 'Yana Kayma',
-          description: 'Yana doğru kayarak hareket',
+          id: 'burpee_medium',
+          name: 'Burpee',
+          description: 'Tam burpee hareketi',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiJumpAcross',
+          instructions: ['Squat-şınav-zıpla', 'Akıcı hareket', 'Güçlü çık']
+        },
+        {
+          id: 'mountain_climber_med',
+          name: 'Mountain Climber',
+          description: 'Hızlı diz çekme hareketi',
+          type: 'timed',
+          duration: 40,
+          targetMuscles: ['Core', 'Kardiyo'],
+          icon: 'GiMountainClimbing',
+          instructions: ['Plank pozisyonu', 'Hızlı diz çek', 'Core sıkı']
+        },
+        {
+          id: 'squat_jumps',
+          name: 'Squat Jump',
+          description: 'Zıplamalı squat',
           type: 'reps',
           reps: 12,
           targetMuscles: ['Bacak', 'Kalça'],
-          icon: 'GiFootsteps',
-          instructions: ['Çömelme pozisyonunda', 'Yana doğru kay', 'Hızlı hareket et']
-        },
-        {
-          id: 'modified_burpee',
-          name: 'Hafif Burpee',
-          description: 'Zıplamasız burpee hareketi',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Tüm vücut', 'Kardiyo'],
           icon: 'GiJumpAcross',
-          instructions: ['Squat pozisyonuna in', 'Plank pozisyonuna geç', 'Geri dön ve kalk']
+          instructions: ['Squat yap', 'Patlayıcı zıpla', 'Yumuşak in']
         },
         {
-          id: 'boxer_shuffle',
-          name: 'Boksör Ayak Hareketi',
-          description: 'Boksör gibi ayak oynatma',
+          id: 'plank_jacks',
+          name: 'Plank Jacks',
+          description: 'Plank pozisyonunda bacak açma',
+          type: 'reps',
+          reps: 15,
+          targetMuscles: ['Core', 'Bacak'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Plank pozisyonu', 'Bacakları aç kapat', 'Core sabit']
+        },
+        {
+          id: 'star_jumps',
+          name: 'Yıldız Zıplaması',
+          description: 'X şeklinde zıplama',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiJumpAcross',
+          instructions: ['Zıpla X şekli yap', 'Kol bacak aç', 'Güçlü hareket']
+        },
+        {
+          id: 'lateral_hops',
+          name: 'Yana Zıplama',
+          description: 'Sağa sola zıplama',
           type: 'timed',
           duration: 30,
-          targetMuscles: ['Bacak', 'Kardiyo'],
-          icon: 'GiBoxingGlove',
-          instructions: ['Hafif çömel', 'Ayakları hızla değiştir', 'Ritim koru']
+          targetMuscles: ['Bacak', 'Denge'],
+          icon: 'GiJumpAcross',
+          instructions: ['Sağa zıpla', 'Sola zıpla', 'Hızlı geçiş']
         },
         {
-          id: 'cross_body_reach',
-          name: 'Çapraz Uzanma',
-          description: 'Çapraz kol uzatma hareketi',
+          id: 'butt_kickers',
+          name: 'Topuk Vurma',
+          description: 'Topukla kalçaya vurma',
+          type: 'timed',
+          duration: 35,
+          targetMuscles: ['Arka bacak', 'Kardiyo'],
+          icon: 'GiLeg',
+          instructions: ['Yerinde koş', 'Topukla kalçaya vur', 'Hızlı tempo']
+        },
+        {
+          id: 'cross_jacks',
+          name: 'Çapraz Jumping Jack',
+          description: 'Çapraz kol bacak hareketi',
           type: 'reps',
           reps: 12,
-          targetMuscles: ['Core', 'Omuz'],
-          icon: 'GiArm',
-          instructions: ['Ayakta dur', 'Sağ eli sol ayağa uzat', 'Çapraz hareket yap']
-        },
-        {
-          id: 'cool_down_walk',
-          name: 'Soğuma Yürüyüşü',
-          description: 'Yavaş tempoda yerinde yürüyüş',
-          type: 'timed',
-          duration: 60,
-          targetMuscles: ['Tüm vücut', 'Soğuma'],
-          icon: 'GiWalk',
-          instructions: ['Yavaş tempoda yürü', 'Nefes düzenle', 'Kalp atışını düşür']
+          targetMuscles: ['Tüm vücut', 'Koordinasyon'],
+          icon: 'GiJumpAcross',
+          instructions: ['Zıpla çapraz geç', 'Kol bacak koordine', 'Ritim tut']
         }
       ]
     },
@@ -769,115 +664,442 @@ export const specialPrograms = {
       name: 'Kuvvet Geliştirme',
       difficulty: 'Orta',
       duration: '30 dakika',
-      description: 'Orta seviye kuvvet antrenmanı',
+      description: 'Kas kuvveti geliştirici antrenman',
       exercises: [
         {
-          id: 'modified_pushup',
-          name: 'Dizüstü Şınav',
-          description: 'Dizler yerde şınav hareketi',
+          id: 'pushup_medium',
+          name: 'Klasik Şınav',
+          description: 'Standart şınav hareketi',
           type: 'reps',
           reps: 12,
-          targetMuscles: ['Göğüs', 'Kol'],
+          targetMuscles: ['Göğüs', 'Kol', 'Omuz'],
           icon: 'GiMuscleUp',
-          instructions: ['Dizlerin üzerine çök', 'Elleri omuz hizasında', 'Şınav yap']
+          instructions: ['Eller omuz altında', 'Vücut düz', 'Tam hareket']
         },
         {
-          id: 'bodyweight_squat',
-          name: 'Vücut Ağırlığı Squat',
-          description: 'Klasik squat hareketi',
+          id: 'squat_medium',
+          name: 'Derin Squat',
+          description: 'Tam squat hareketi',
           type: 'reps',
           reps: 15,
           targetMuscles: ['Bacak', 'Kalça'],
           icon: 'GiLeg',
-          instructions: ['Ayaklar omuz genişliğinde', 'Kalçayı geriye it', 'Derin squat yap']
+          instructions: ['Derin squat', 'Kalça geriye', 'Güçlü kalk']
         },
         {
-          id: 'plank_hold',
+          id: 'plank_medium',
           name: 'Plank Tutma',
-          description: 'Plank pozisyonunu koruma',
+          description: 'Uzun süreli plank',
           type: 'timed',
-          duration: 45,
-          targetMuscles: ['Core', 'Karın'],
+          duration: 60,
+          targetMuscles: ['Core', 'Omuz'],
           icon: 'GiAbdominalArmor',
-          instructions: ['Plank pozisyonuna geç', 'Vücudu düz tut', 'Nefes almaya devam et']
+          instructions: ['Vücut düz', 'Core sıkı', 'Nefes al']
         },
         {
-          id: 'lunges',
-          name: 'Lunge',
-          description: 'Öne adım atarak çömelme',
+          id: 'lunges_medium',
+          name: 'Alternatif Lunge',
+          description: 'Sağ sol lunge hareketi',
           type: 'reps',
-          reps: 10,
-          targetMuscles: ['Bacak', 'Kalça'],
+          reps: 16,
+          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
           icon: 'GiLeg',
-          instructions: ['Öne adım at', 'Arka diz yere yaklaş', 'Bacak değiştir']
+          instructions: ['Adım at', 'Derin in', 'Güçlü çık']
         },
         {
-          id: 'tricep_dips',
-          name: 'Tricep Dips',
-          description: 'Sandalyede arka kol çalışması',
+          id: 'pike_pushup_med',
+          name: 'Pike Push-up',
+          description: 'Omuz odaklı şınav',
           type: 'reps',
           reps: 10,
+          targetMuscles: ['Omuz', 'Kol'],
+          icon: 'GiMuscleUp',
+          instructions: ['V pozisyonu', 'Baş yere yaklaş', 'Omuz çalış']
+        },
+        {
+          id: 'single_leg_glute',
+          name: 'Tek Bacak Kalça',
+          description: 'Tek bacakla kalça kaldırma',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Kalça', 'Core'],
+          icon: 'GiPelvis',
+          instructions: ['Tek bacak uzat', 'Kalça kaldır', 'Her iki bacak']
+        },
+        {
+          id: 'tricep_dips_med',
+          name: 'Tricep Dips',
+          description: 'Sandalye dips hareketi',
+          type: 'reps',
+          reps: 12,
           targetMuscles: ['Arka kol', 'Omuz'],
           icon: 'GiStrongMan',
-          instructions: ['Sandalyeye yaslan', 'Vücudu indir', 'Kollarla yukarı it']
+          instructions: ['Sandalye kenarı', 'Derin in', 'Güçlü çık']
         },
         {
-          id: 'glute_bridge',
-          name: 'Kalça Köprüsü',
-          description: 'Kalçayı yukarı kaldırma',
-          type: 'reps',
-          reps: 15,
-          targetMuscles: ['Kalça', 'Arka bacak'],
-          icon: 'GiPelvis',
-          instructions: ['Sırtüstü yat', 'Kalçayı kaldır', 'Sık ve indir']
-        },
-        {
-          id: 'mountain_climber_slow',
-          name: 'Yavaş Mountain Climber',
-          description: 'Kontrollü mountain climber',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Core', 'Kardiyo'],
-          icon: 'GiMountainClimbing',
-          instructions: ['Plank pozisyonunda', 'Dizleri kontrollü çek', 'Alternatif hareket']
-        },
-        {
-          id: 'wall_sit',
-          name: 'Duvar Oturma',
-          description: 'Duvara yaslanarak oturma pozisyonu',
+          id: 'side_plank_med',
+          name: 'Yan Plank',
+          description: 'Yan plank tutma',
           type: 'timed',
           duration: 30,
-          targetMuscles: ['Bacak', 'Kalça'],
-          icon: 'GiChair',
-          instructions: ['Duvara yaslan', 'Sandalyede oturur gibi çömel', 'Pozisyonu koru']
+          targetMuscles: ['Yan karın', 'Omuz'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Yan yat', 'Vücut düz', 'Her iki yan']
         },
         {
-          id: 'standing_calf_raise',
-          name: 'Ayakta Baldır Kaldırma',
-          description: 'Parmak ucuna yükselme',
+          id: 'calf_raise_med',
+          name: 'Tek Bacak Baldır',
+          description: 'Tek bacakla baldır kaldırma',
           type: 'reps',
-          reps: 20,
+          reps: 15,
           targetMuscles: ['Baldır'],
           icon: 'GiFoot',
-          instructions: ['Ayakta dur', 'Parmak ucuna yüksel', 'Yavaşça in']
+          instructions: ['Tek ayak', 'Yüksek kalk', 'Her iki bacak']
+        },
+        {
+          id: 'superman_med',
+          name: 'Superman Tutma',
+          description: 'Superman pozisyonu tutma',
+          type: 'timed',
+          duration: 25,
+          targetMuscles: ['Sırt', 'Kalça'],
+          icon: 'GiSupersonicArrow',
+          instructions: ['Kol bacak kaldır', 'Pozisyon tut', 'Güçlü kal']
+        }
+      ]
+    },
+    {
+      id: 'medium_3',
+      name: 'Fonksiyonel Hareket',
+      difficulty: 'Orta',
+      duration: '28 dakika',
+      description: 'Günlük yaşam için fonksiyonel hareketler',
+      exercises: [
+        {
+          id: 'deadlift_bodyweight',
+          name: 'Vücut Ağırlığı Deadlift',
+          description: 'Kalça menteşeli hareket',
+          type: 'reps',
+          reps: 12,
+          targetMuscles: ['Kalça', 'Sırt', 'Bacak'],
+          icon: 'GiWeightLiftingUp',
+          instructions: ['Kalça geriye', 'Sırt düz', 'Güçlü kalk']
+        },
+        {
+          id: 'step_ups',
+          name: 'Step Up',
+          description: 'Yüksek yere çıkma',
+          type: 'reps',
+          reps: 12,
+          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
+          icon: 'GiStairs',
+          instructions: ['Yüksek yere çık', 'Kontrollü in', 'Her iki bacak']
+        },
+        {
+          id: 'bear_crawl',
+          name: 'Ayı Yürüyüşü',
+          description: 'Dört ayak üzerinde hareket',
+          type: 'timed',
+          duration: 30,
+          targetMuscles: ['Tüm vücut', 'Core'],
+          icon: 'GiBearFace',
+          instructions: ['Dört ayak üzerine', 'İleri geri yürü', 'Core sıkı']
+        },
+        {
+          id: 'lateral_lunges',
+          name: 'Yana Lunge',
+          description: 'Yana adım atma',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Bacak', 'Kalça', 'İç bacak'],
+          icon: 'GiLeg',
+          instructions: ['Yana adım at', 'Derin squat', 'Her iki yan']
+        },
+        {
+          id: 'inchworm',
+          name: 'Solucan Hareketi',
+          description: 'Öne yürüyerek plank',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Tüm vücut', 'Esneklik'],
+          icon: 'GiWorm',
+          instructions: ['Öne eğil', 'Ellerle yürü', 'Plank pozisyonu']
+        },
+        {
+          id: 'reverse_lunge',
+          name: 'Geriye Lunge',
+          description: 'Geriye adım atma',
+          type: 'reps',
+          reps: 12,
+          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
+          icon: 'GiLeg',
+          instructions: ['Geriye adım', 'Derin in', 'Her iki bacak']
+        },
+        {
+          id: 'crab_walk',
+          name: 'Yengeç Yürüyüşü',
+          description: 'Ters pozisyonda yürüme',
+          type: 'timed',
+          duration: 25,
+          targetMuscles: ['Kol', 'Core', 'Bacak'],
+          icon: 'GiCrab',
+          instructions: ['Ters otur', 'Kalça yukarı', 'İleri geri yürü']
+        },
+        {
+          id: 'single_leg_deadlift',
+          name: 'Tek Bacak Deadlift',
+          description: 'Tek bacakla denge ve kuvvet',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Kalça', 'Denge', 'Sırt'],
+          icon: 'GiBalancing',
+          instructions: ['Tek ayak dur', 'Öne eğil', 'Her iki bacak']
+        },
+        {
+          id: 'turkish_getup_half',
+          name: 'Yarım Turkish Get-up',
+          description: 'Yataktan kalkma hareketi',
+          type: 'reps',
+          reps: 6,
+          targetMuscles: ['Tüm vücut', 'Core'],
+          icon: 'GiGetUp',
+          instructions: ['Yat', 'Yavaş kalk', 'Her iki yan']
+        },
+        {
+          id: 'wall_handstand_prep',
+          name: 'Duvar El Duruşu Hazırlık',
+          description: 'El duruşu hazırlık hareketi',
+          type: 'timed',
+          duration: 20,
+          targetMuscles: ['Omuz', 'Core', 'Kol'],
+          icon: 'GiHandstand',
+          instructions: ['Duvara yaslan', 'Ayakları yukarı', 'Denge kur']
+        }
+      ]
+    },
+    {
+      id: 'medium_4',
+      name: 'Kardiyo Kuvvet',
+      difficulty: 'Orta',
+      duration: '26 dakika',
+      description: 'Kardiyo ve kuvveti birleştiren antrenman',
+      exercises: [
+        {
+          id: 'thrusters',
+          name: 'Thruster',
+          description: 'Squat ve omuz press birleşimi',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiWeightLiftingUp',
+          instructions: ['Squat yap', 'Kalkarken kol uzat', 'Akıcı hareket']
+        },
+        {
+          id: 'burpee_pushup',
+          name: 'Burpee + Push-up',
+          description: 'Şınavlı burpee',
+          type: 'reps',
+          reps: 6,
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiJumpAcross',
+          instructions: ['Burpee yap', 'Şınav ekle', 'Güçlü bitir']
+        },
+        {
+          id: 'jump_squats_pulse',
+          name: 'Pulse Squat Jump',
+          description: 'Pulse ile squat jump',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Bacak', 'Kalça'],
+          icon: 'GiJumpAcross',
+          instructions: ['3 pulse squat', 'Sonra zıpla', 'Tekrarla']
+        },
+        {
+          id: 'plank_up_down',
+          name: 'Plank Up-Down',
+          description: 'Planktan şınav pozisyonuna',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Core', 'Kol'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Planktan başla', 'Şınav pozisyonuna', 'Geri plank']
+        },
+        {
+          id: 'lunge_jumps',
+          name: 'Lunge Jump',
+          description: 'Zıplamalı lunge',
+          type: 'reps',
+          reps: 12,
+          targetMuscles: ['Bacak', 'Kalça', 'Kardiyo'],
+          icon: 'GiJumpAcross',
+          instructions: ['Lunge pozisyonu', 'Zıpla bacak değiş', 'Hızlı geçiş']
+        },
+        {
+          id: 'pushup_t',
+          name: 'T Push-up',
+          description: 'Dönüşlü şınav',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Göğüs', 'Core', 'Omuz'],
+          icon: 'GiMuscleUp',
+          instructions: ['Şınav yap', 'Yana dön T yap', 'Her iki yan']
+        },
+        {
+          id: 'squat_hold_pulse',
+          name: 'Squat Hold + Pulse',
+          description: 'Squat tutma ve pulse',
+          type: 'timed',
+          duration: 45,
+          targetMuscles: ['Bacak', 'Kalça'],
+          icon: 'GiLeg',
+          instructions: ['Squat pozisyonu tut', 'Küçük pulse yap', 'Yanma hisset']
+        },
+        {
+          id: 'mountain_climber_cross',
+          name: 'Cross Mountain Climber',
+          description: 'Çapraz mountain climber',
+          type: 'reps',
+          reps: 16,
+          targetMuscles: ['Core', 'Kardiyo'],
+          icon: 'GiMountainClimbing',
+          instructions: ['Plank pozisyonu', 'Çapraz diz çek', 'Hızlı hareket']
+        },
+        {
+          id: 'jump_lunge_hold',
+          name: 'Jump Lunge Hold',
+          description: 'Zıpla ve lunge tut',
+          type: 'reps',
+          reps: 6,
+          targetMuscles: ['Bacak', 'Denge'],
+          icon: 'GiJumpAcross',
+          instructions: ['Zıpla lunge', '3 saniye tut', 'Bacak değiş']
+        },
+        {
+          id: 'plank_jack_pushup',
+          name: 'Plank Jack + Push-up',
+          description: 'Plank jack ve şınav birleşimi',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Tüm vücut'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Plank jack yap', 'Şınav ekle', 'Akıcı hareket']
+        }
+      ]
+    },
+    {
+      id: 'medium_5',
+      name: 'Core Güçlendirme',
+      difficulty: 'Orta',
+      duration: '22 dakika',
+      description: 'Core kaslarına odaklanan yoğun antrenman',
+      exercises: [
+        {
+          id: 'bicycle_crunch_med',
+          name: 'Bicycle Crunch',
+          description: 'Çapraz karın hareketi',
+          type: 'reps',
+          reps: 20,
+          targetMuscles: ['Karın', 'Yan karın'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Sırtüstü yat', 'Çapraz dirsek diz', 'Hızlı hareket']
+        },
+        {
+          id: 'russian_twist_med',
+          name: 'Russian Twist',
+          description: 'Ağırlıklı dönüş hareketi',
+          type: 'reps',
+          reps: 25,
+          targetMuscles: ['Yan karın', 'Core'],
+          icon: 'GiTwister',
+          instructions: ['Otur gövde geriye', 'Sağa sola dön', 'Core sıkı']
         },
         {
           id: 'dead_bug',
-          name: 'Ölü Böcek',
-          description: 'Karşılıklı kol-bacak hareketi',
+          name: 'Dead Bug',
+          description: 'Karşıt kol bacak hareketi',
           type: 'reps',
-          reps: 8,
-          targetMuscles: ['Core', 'Karın'],
+          reps: 12,
+          targetMuscles: ['Core', 'Denge'],
           icon: 'GiBug',
-          instructions: ['Sırtüstü yat', 'Karşı kol ve bacağı kaldır', 'Yavaşça değiştir']
+          instructions: ['Sırtüstü yat', 'Karşıt kol bacak', 'Yavaş hareket']
+        },
+        {
+          id: 'hollow_hold',
+          name: 'Hollow Hold',
+          description: 'Çukur pozisyon tutma',
+          type: 'timed',
+          duration: 30,
+          targetMuscles: ['Karın', 'Core'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Sırt yerde', 'Omuz bacak kaldır', 'Çukur şekil']
+        },
+        {
+          id: 'v_ups',
+          name: 'V-Up',
+          description: 'V şeklinde karın hareketi',
+          type: 'reps',
+          reps: 12,
+          targetMuscles: ['Karın', 'Core'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Sırtüstü uzun yat', 'V şekli yap', 'Kontrollü in']
+        },
+        {
+          id: 'plank_knee_elbow',
+          name: 'Plank Knee to Elbow',
+          description: 'Plankta diz dirsek birleştirme',
+          type: 'reps',
+          reps: 16,
+          targetMuscles: ['Core', 'Yan karın'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Plank pozisyonu', 'Diz dirseğe', 'Her iki yan']
+        },
+        {
+          id: 'leg_raise_med',
+          name: 'Leg Raise',
+          description: 'Bacak kaldırma hareketi',
+          type: 'reps',
+          reps: 15,
+          targetMuscles: ['Alt karın'],
+          icon: 'GiLeg',
+          instructions: ['Sırtüstü yat', 'Bacakları kaldır', 'Yavaş indir']
+        },
+        {
+          id: 'side_plank_crunch',
+          name: 'Side Plank Crunch',
+          description: 'Yan plankta karın hareketi',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Yan karın', 'Core'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Yan plank', 'Üst diz çek', 'Her iki yan']
+        },
+        {
+          id: 'flutter_kicks',
+          name: 'Flutter Kicks',
+          description: 'Bacak çırpma hareketi',
+          type: 'timed',
+          duration: 30,
+          targetMuscles: ['Alt karın', 'Kalça'],
+          icon: 'GiLeg',
+          instructions: ['Sırtüstü yat', 'Bacakları çırp', 'Hızlı hareket']
+        },
+        {
+          id: 'bear_hold',
+          name: 'Bear Hold',
+          description: 'Ayı pozisyonu tutma',
+          type: 'timed',
+          duration: 25,
+          targetMuscles: ['Core', 'Omuz'],
+          icon: 'GiBearFace',
+          instructions: ['Dört ayak üzerine', 'Dizler havada', 'Sabit tut']
         }
       ]
     }
   ],
-
-  // ZOR SEVİYE (10 Program)  
+  
+  // ZOR SEVİYE (5 Program)
   hard: [
-    {
+        {
       id: 'hard_1',
       name: 'HIIT Inferno',
       difficulty: 'Zor',
@@ -885,104 +1107,104 @@ export const specialPrograms = {
       description: 'Yüksek yoğunluklu interval antrenmanı',
       exercises: [
         {
-          id: 'burpee_advanced',
-          name: 'Gelişmiş Burpee',
-          description: 'Zıplamalı burpee hareketi',
+          id: 'burpee_tuck_jump',
+          name: 'Burpee Tuck Jump',
+          description: 'Burpee sonrası dizleri göğse çekme zıplaması',
           type: 'reps',
-          reps: 10,
+          reps: 8,
           targetMuscles: ['Tüm vücut', 'Kardiyo'],
           icon: 'GiJumpAcross',
-          instructions: ['Squat pozisyonuna in', 'Plank pozisyonuna geç', 'Şınav çek', 'Zıplayarak kalk']
+          instructions: ['Burpee yap', 'Zıplarken dizleri göğse çek', 'Patlayıcı hareket']
         },
         {
-          id: 'mountain_climber_fast',
-          name: 'Hızlı Mountain Climber',
-          description: 'Yüksek tempoda mountain climber',
-          type: 'timed',
-          duration: 60,
-          targetMuscles: ['Core', 'Kardiyo'],
-          icon: 'GiMountainClimbing',
-          instructions: ['Plank pozisyonunda', 'Dizleri hızla çek', 'Maksimum hızda']
-        },
-        {
-          id: 'jump_squats',
-          name: 'Zıplamalı Squat',
-          description: 'Squat sonrası zıplama',
+          id: 'pistol_squat_assisted',
+          name: 'Assisted Pistol Squat',
+          description: 'Destekli tek bacak squat',
           type: 'reps',
-          reps: 15,
-          targetMuscles: ['Bacak', 'Kalça', 'Kardiyo'],
-          icon: 'GiJumpAcross',
-          instructions: ['Squat yap', 'Patlayıcı şekilde zıpla', 'Yumuşak iniş yap']
+          reps: 6,
+          targetMuscles: ['Bacak', 'Denge', 'Core'],
+          icon: 'GiLeg',
+          instructions: ['Tek bacak squat', 'Diğer bacak uzat', 'Destekle denge']
         },
         {
-          id: 'pushup_full',
-          name: 'Tam Şınav',
-          description: 'Klasik şınav hareketi',
+          id: 'explosive_pushup',
+          name: 'Explosive Push-up',
+          description: 'Patlayıcı şınav',
+          type: 'reps',
+          reps: 8,
+          targetMuscles: ['Göğüs', 'Kol', 'Güç'],
+          icon: 'GiMuscleUp',
+          instructions: ['Şınav pozisyonu', 'Patlayıcı yukarı it', 'Eller yerden kalksın']
+        },
+        {
+          id: 'jump_lunge_switch',
+          name: 'Jump Lunge Switch',
+          description: 'Zıplayarak lunge değiştirme',
+          type: 'reps',
+          reps: 16,
+          targetMuscles: ['Bacak', 'Kardiyo', 'Güç'],
+          icon: 'GiJumpAcross',
+          instructions: ['Lunge pozisyonu', 'Zıpla bacak değiştir', 'Hızlı geçiş']
+        },
+        {
+          id: 'plank_up_down_fast',
+          name: 'Fast Plank Up-Down',
+          description: 'Hızlı plank yukarı aşağı',
           type: 'reps',
           reps: 12,
-          targetMuscles: ['Göğüs', 'Kol', 'Core'],
-          icon: 'GiMuscleUp',
-          instructions: ['Plank pozisyonunda', 'Göğsü yere yaklaştır', 'Güçlü şekilde it']
-        },
-        {
-          id: 'high_intensity_plank',
-          name: 'Yüksek Yoğunluk Plank',
-          description: 'Uzun süreli plank tutma',
-          type: 'timed',
-          duration: 60,
-          targetMuscles: ['Core', 'Karın', 'Omuz'],
+          targetMuscles: ['Core', 'Omuz', 'Kol'],
           icon: 'GiAbdominalArmor',
-          instructions: ['Plank pozisyonuna geç', 'Vücudu sert tut', 'Nefes kontrolü yap']
+          instructions: ['Plank pozisyonu', 'Hızlı el-dirsek geçiş', 'Core sabit']
         },
         {
-          id: 'tuck_jumps',
-          name: 'Diz Çekme Zıplaması',
-          description: 'Zıplayarak dizleri göğse çekme',
+          id: 'single_arm_burpee',
+          name: 'Single Arm Burpee',
+          description: 'Tek kollu burpee',
           type: 'reps',
-          reps: 10,
-          targetMuscles: ['Bacak', 'Core', 'Kardiyo'],
+          reps: 6,
+          targetMuscles: ['Tüm vücut', 'Core', 'Denge'],
           icon: 'GiJumpAcross',
-          instructions: ['Zıpla', 'Dizleri göğse çek', 'Yumuşak iniş']
+          instructions: ['Tek elle şınav', 'Burpee hareketi', 'Her iki kol']
         },
         {
-          id: 'pike_pushup',
-          name: 'Pike Şınav',
-          description: 'V pozisyonunda şınav',
+          id: 'broad_jump',
+          name: 'Broad Jump',
+          description: 'Uzun atlama',
           type: 'reps',
           reps: 8,
-          targetMuscles: ['Omuz', 'Kol', 'Core'],
-          icon: 'GiMuscleUp',
-          instructions: ['V pozisyonu al', 'Başı yere yaklaştır', 'Güçlü şekilde it']
-        },
-        {
-          id: 'lateral_bounds',
-          name: 'Yana Sıçrama',
-          description: 'Yana doğru güçlü sıçrama',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
+          targetMuscles: ['Bacak', 'Güç', 'Kardiyo'],
           icon: 'GiJumpAcross',
-          instructions: ['Tek ayakta dur', 'Yana güçlü sıçra', 'Diğer ayakla yakala']
+          instructions: ['Squat pozisyonu', 'Öne doğru uzun zıpla', 'Yumuşak in']
         },
         {
-          id: 'spiderman_pushup',
-          name: 'Spiderman Şınav',
-          description: 'Şınav sırasında diz çekme',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Göğüs', 'Core', 'Kalça'],
-          icon: 'GiMuscleUp',
-          instructions: ['Şınav pozisyonunda', 'İnerken dizi dirseğe getir', 'Alternatif hareket']
-        },
-        {
-          id: 'bear_crawl',
-          name: 'Ayı Yürüyüşü',
-          description: 'Dört ayak üzerinde ilerleme',
+          id: 'mountain_climber_cross',
+          name: 'Cross Mountain Climber',
+          description: 'Çapraz mountain climber',
           type: 'timed',
           duration: 45,
-          targetMuscles: ['Tüm vücut', 'Core'],
-          icon: 'GiBearHead',
-          instructions: ['Dört ayak üzerine çık', 'İleri geri hareket et', 'Dizler yerde değil']
+          targetMuscles: ['Core', 'Kardiyo', 'Koordinasyon'],
+          icon: 'GiMountainClimbing',
+          instructions: ['Plank pozisyonu', 'Dizi karşı dirseğe', 'Hızlı çapraz']
+        },
+        {
+          id: 'devil_press',
+          name: 'Devil Press',
+          description: 'Burpee ve overhead press birleşimi',
+          type: 'reps',
+          reps: 6,
+          targetMuscles: ['Tüm vücut', 'Güç'],
+          icon: 'GiWeightLiftingUp',
+          instructions: ['Burpee yap', 'Kalkarken kolları yukarı', 'Akıcı hareket']
+        },
+        {
+          id: 'handstand_pushup_prep',
+          name: 'Handstand Push-up Prep',
+          description: 'El duruşu şınavı hazırlık',
+          type: 'reps',
+          reps: 5,
+          targetMuscles: ['Omuz', 'Kol', 'Core'],
+          icon: 'GiHandstand',
+          instructions: ['Duvara yaslan', 'El duruşu pozisyonu', 'Şınav hareketi']
         }
       ]
     },
@@ -994,424 +1216,213 @@ export const specialPrograms = {
       description: 'Maksimum güç ve dayanıklılık antrenmanı',
       exercises: [
         {
-          id: 'single_leg_squat',
-          name: 'Tek Bacak Squat',
-          description: 'Tek bacakla squat hareketi',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
-          icon: 'GiLeg',
-          instructions: ['Tek ayak üzerinde dur', 'Squat pozisyonuna in', 'Güçlü şekilde kalk']
-        },
-        {
-          id: 'handstand_pushup_prep',
-          name: 'Handstand Şınav Hazırlık',
-          description: 'Duvarda ters şınav hareketi',
-          type: 'reps',
-          reps: 5,
-          targetMuscles: ['Omuz', 'Kol', 'Core'],
-          icon: 'GiMuscleUp',
-          instructions: ['Duvara yaslan', 'Ters pozisyonda şınav', 'Kontrollü hareket']
-        },
-        {
-          id: 'explosive_pushup',
-          name: 'Patlayıcı Şınav',
-          description: 'Elleri yerden kesen şınav',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Göğüs', 'Kol', 'Güç'],
-          icon: 'GiMuscleUp',
-          instructions: ['Şınav pozisyonunda', 'Patlayıcı şekilde it', 'Eller havada']
-        },
-        {
-          id: 'pistol_squat_assist',
-          name: 'Destekli Pistol Squat',
-          description: 'Tek bacak tam squat',
-          type: 'reps',
-          reps: 4,
-          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
-          icon: 'GiLeg',
-          instructions: ['Tek bacak uzat', 'Tam squat yap', 'Destekle kalk']
-        },
-        {
-          id: 'l_sit_hold',
-          name: 'L-Sit Tutma',
-          description: 'L pozisyonunda asılı kalma',
-          type: 'timed',
-          duration: 20,
-          targetMuscles: ['Core', 'Kol', 'Omuz'],
-          icon: 'GiAbdominalArmor',
-          instructions: ['Ellerde destek al', 'Bacakları kaldır', 'L şekli oluştur']
-        },
-        {
           id: 'archer_pushup',
-          name: 'Okçu Şınavı',
-          description: 'Tek kola yüklenen şınav',
+          name: 'Archer Push-up',
+          description: 'Tek kol ağırlıklı şınav',
           type: 'reps',
           reps: 6,
           targetMuscles: ['Göğüs', 'Kol', 'Core'],
           icon: 'GiMuscleUp',
-          instructions: ['Geniş pozisyon al', 'Bir kola yüklen', 'Alternatif hareket']
-        },
-        {
-          id: 'shrimp_squat',
-          name: 'Karides Squat',
-          description: 'Tek bacak arka squat',
-          type: 'reps',
-          reps: 4,
-          targetMuscles: ['Bacak', 'Kalça', 'Esneklik'],
-          icon: 'GiLeg',
-          instructions: ['Arka bacağı tut', 'Tek bacakla squat', 'Denge koru']
-        },
-        {
-          id: 'human_flag_prep',
-          name: 'İnsan Bayrağı Hazırlık',
-          description: 'Yan plank ileri seviye',
-          type: 'timed',
-          duration: 15,
-          targetMuscles: ['Core', 'Kol', 'Yan karın'],
-          icon: 'GiAbdominalArmor',
-          instructions: ['Yan plank pozisyonu', 'Vücudu düz tut', 'Maksimum gerginlik']
+          instructions: ['Geniş şınav pozisyonu', 'Bir kola ağırlık ver', 'Her iki kol']
         },
         {
           id: 'muscle_up_prep',
-          name: 'Muscle-Up Hazırlık',
-          description: 'Çekme ve itme kombinasyonu',
+          name: 'Muscle-up Prep',
+          description: 'Muscle-up hazırlık hareketi',
           type: 'reps',
           reps: 5,
-          targetMuscles: ['Sırt', 'Göğüs', 'Kol'],
+          targetMuscles: ['Sırt', 'Kol', 'Core'],
           icon: 'GiMuscleUp',
-          instructions: ['Çekme hareketi', 'İtme hareketine geç', 'Akıcı hareket']
+          instructions: ['Çekme hareketi', 'Yukarı itme', 'Akıcı geçiş']
         },
         {
-          id: 'advanced_planche_lean',
-          name: 'İleri Planche Eğilme',
-          description: 'Planche pozisyonuna hazırlık',
+          id: 'planche_lean',
+          name: 'Planche Lean',
+          description: 'Planche eğilme hareketi',
           type: 'timed',
           duration: 20,
           targetMuscles: ['Omuz', 'Core', 'Bilek'],
-          icon: 'GiMuscleUp',
-          instructions: ['Plank pozisyonunda', 'Öne doğru eğil', 'Ayak parmaklarında']
-        }
-      ]
-    }
-  ]
-};
-
-// Tüm programları tek listede topla
-export const getAllSpecialPrograms = () => {
-  return [
-    ...specialPrograms.easy,
-    ...specialPrograms.medium,
-    ...specialPrograms.hard
-  ];
-};  
-  ,
-    {
-      id: 'medium_3',
-      name: 'Fonksiyonel Hareket',
-      difficulty: 'Orta',
-      duration: '28 dakika',
-      description: 'Günlük yaşamda kullanılan fonksiyonel hareketler',
-      exercises: [
-        {
-          id: 'squat_to_press',
-          name: 'Squat ve Kol Kaldırma',
-          description: 'Squat sonrası kolları yukarı kaldırma',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Bacak', 'Omuz', 'Core'],
-          icon: 'GiMuscleUp',
-          instructions: ['Squat yap', 'Kalkarken kolları yukarı kaldır', 'Kontrollü hareket']
+          icon: 'GiHandstand',
+          instructions: ['Şınav pozisyonu', 'Öne doğru eğil', 'Ayaklar hafif']
         },
         {
-          id: 'reverse_lunge_twist',
-          name: 'Geriye Lunge ve Çevirme',
-          description: 'Geriye lunge ile bel çevirme',
+          id: 'front_lever_tuck',
+          name: 'Front Lever Tuck',
+          description: 'Ön lever büzülme',
+          type: 'timed',
+          duration: 15,
+          targetMuscles: ['Sırt', 'Core', 'Kol'],
+          icon: 'GiStrongMan',
+          instructions: ['Çubuğa asıl', 'Dizleri göğse çek', 'Yatay tut']
+        },
+        {
+          id: 'dragon_squat',
+          name: 'Dragon Squat',
+          description: 'Ejder squat hareketi',
           type: 'reps',
-          reps: 10,
+          reps: 5,
           targetMuscles: ['Bacak', 'Core', 'Denge'],
-          icon: 'GiTwister',
-          instructions: ['Geriye adım at', 'Beli çevir', 'Denge koru']
+          icon: 'GiLeg',
+          instructions: ['Tek bacak squat', 'Diğer bacak yana', 'Derin hareket']
         },
         {
-          id: 'bear_crawl_short',
-          name: 'Kısa Ayı Yürüyüşü',
-          description: 'Kısa mesafe ayı yürüyüşü',
+          id: 'handstand_hold',
+          name: 'Handstand Hold',
+          description: 'El duruşu tutma',
           type: 'timed',
           duration: 30,
-          targetMuscles: ['Tüm vücut', 'Core'],
-          icon: 'GiBearHead',
-          instructions: ['Dört ayak üzerine çık', 'İleri geri hareket et', 'Core sıkı tut']
+          targetMuscles: ['Omuz', 'Core', 'Denge'],
+          icon: 'GiHandstand',
+          instructions: ['El duruşu pozisyonu', 'Denge kur', 'Sabit tut']
         },
         {
-          id: 'single_leg_deadlift',
-          name: 'Tek Bacak Deadlift',
-          description: 'Tek bacakla öne eğilme',
+          id: 'one_arm_pushup_prep',
+          name: 'One Arm Push-up Prep',
+          description: 'Tek kol şınavı hazırlık',
           type: 'reps',
-          reps: 8,
-          targetMuscles: ['Arka bacak', 'Kalça', 'Denge'],
-          icon: 'GiLeg',
-          instructions: ['Tek ayak üzerinde dur', 'Öne eğil', 'Arka bacağı kaldır']
+          reps: 4,
+          targetMuscles: ['Göğüs', 'Kol', 'Core'],
+          icon: 'GiMuscleUp',
+          instructions: ['Tek kol şınav pozisyonu', 'Yavaş hareket', 'Her iki kol']
         },
         {
-          id: 'plank_up_down',
-          name: 'Plank Yukarı Aşağı',
-          description: 'Plank pozisyonunda yukarı aşağı',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Core', 'Kol', 'Omuz'],
-          icon: 'GiAbdominalArmor',
-          instructions: ['Plank pozisyonunda', 'Ellere çık', 'Ön kollara in']
+          id: 'human_flag_prep',
+          name: 'Human Flag Prep',
+          description: 'İnsan bayrağı hazırlık',
+          type: 'timed',
+          duration: 15,
+          targetMuscles: ['Core', 'Kol', 'Yan karın'],
+          icon: 'GiStrongMan',
+          instructions: ['Dikey çubuğa asıl', 'Vücudu yatay tut', 'Core sıkı']
         },
         {
-          id: 'lateral_lunge',
-          name: 'Yana Lunge',
-          description: 'Yana doğru lunge hareketi',
-          type: 'reps',
-          reps: 10,
-          targetMuscles: ['Bacak', 'Kalça', 'İç bacak'],
-          icon: 'GiLeg',
-          instructions: ['Yana geniş adım at', 'Bir bacağa çök', 'Diğer bacak düz']
-        },
-        {
-          id: 'inchworm',
-          name: 'Tırtıl Hareketi',
-          description: 'Tırtıl gibi ilerleme hareketi',
+          id: 'typewriter_pullup',
+          name: 'Typewriter Pull-up',
+          description: 'Daktilo çekme hareketi',
           type: 'reps',
           reps: 6,
-          targetMuscles: ['Tüm vücut', 'Esneklik'],
-          icon: 'GiWorm',
-          instructions: ['Öne eğil', 'Ellerle ilerle', 'Plank pozisyonuna gel']
+          targetMuscles: ['Sırt', 'Kol', 'Core'],
+          icon: 'GiMuscleUp',
+          instructions: ['Çek yukarı', 'Sağa sola kay', 'Her iki yan']
         },
         {
-          id: 'curtsy_lunge',
-          name: 'Reverans Lunge',
-          description: 'Çapraz geriye lunge',
+          id: 'shrimp_squat_prep',
+          name: 'Shrimp Squat Prep',
+          description: 'Karides squat hazırlık',
           type: 'reps',
-          reps: 10,
-          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
+          reps: 4,
+          targetMuscles: ['Bacak', 'Denge', 'Esneklik'],
           icon: 'GiLeg',
-          instructions: ['Çapraz geriye adım at', 'Reverans pozisyonu', 'Alternatif hareket']
-        },
-        {
-          id: 'bird_dog',
-          name: 'Kuş Köpek',
-          description: 'Karşılıklı kol bacak kaldırma',
-          type: 'reps',
-          reps: 8,
-          targetMuscles: ['Core', 'Sırt', 'Denge'],
-          icon: 'GiBirdHouse',
-          instructions: ['Dört ayak üzerine çök', 'Karşı kol ve bacağı kaldır', 'Denge koru']
+          instructions: ['Tek bacak squat', 'Arka bacak tutulur', 'Derin squat']
         }
       ]
     },
     {
-      id: 'medium_4',
-      name: 'Kardiyo Kuvvet',
-      difficulty: 'Orta',
-      duration: '32 dakika',
-      description: 'Kardiyo ve kuvvet kombinasyonu',
-      exercises: [
-        {
-          id: 'squat_jump_medium',
-          name: 'Orta Squat Jump',
-          description: 'Kontrollü squat jump',
-          type: 'reps',
-          reps: 10,
-          targetMuscles: ['Bacak', 'Kardiyo'],
-          icon: 'GiJumpAcross',
-          instructions: ['Squat yap', 'Kontrollü zıpla', 'Yumuşak iniş']
-        },
-        {
-          id: 'pushup_knee',
-          name: 'Dizüstü Şınav',
-          description: 'Dizler yerde şınav',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Göğüs', 'Kol'],
-          icon: 'GiMuscleUp',
-          instructions: ['Dizler yerde', 'Tam şınav hareketi', 'Kontrollü in-çık']
-        },
-        {
-          id: 'alternating_lunge',
-          name: 'Alternatif Lunge',
-          description: 'Sağ sol lunge değişimi',
-          type: 'reps',
-          reps: 16,
-          targetMuscles: ['Bacak', 'Kalça'],
-          icon: 'GiLeg',
-          instructions: ['Sağa lunge', 'Merkeze dön', 'Sola lunge']
-        },
-        {
-          id: 'modified_mountain_climber',
-          name: 'Orta Mountain Climber',
-          description: 'Orta tempo mountain climber',
-          type: 'timed',
-          duration: 30,
-          targetMuscles: ['Core', 'Kardiyo'],
-          icon: 'GiMountainClimbing',
-          instructions: ['Plank pozisyonunda', 'Orta tempoda', 'Kontrollü hareket']
-        },
-        {
-          id: 'side_plank_knee',
-          name: 'Dizüstü Yan Plank',
-          description: 'Dizler yerde yan plank',
-          type: 'timed',
-          duration: 20,
-          targetMuscles: ['Yan karın', 'Core'],
-          icon: 'GiAbdominalArmor',
-          instructions: ['Yana yat', 'Dizler yerde', 'Vücudu kaldır']
-        },
-        {
-          id: 'step_up_knee',
-          name: 'Diz Kaldırmalı Step',
-          description: 'Step up ile diz kaldırma',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Bacak', 'Denge'],
-          icon: 'GiStairs',
-          instructions: ['Basamağa çık', 'Dizi yukarı kaldır', 'Kontrollü in']
-        },
-        {
-          id: 'russian_twist_medium',
-          name: 'Orta Russian Twist',
-          description: 'Ayaklar yerde russian twist',
-          type: 'reps',
-          reps: 20,
-          targetMuscles: ['Yan karın', 'Core'],
-          icon: 'GiTwister',
-          instructions: ['Otur', 'Ayaklar yerde', 'Gövdeyi sağa sola çevir']
-        },
-        {
-          id: 'reverse_fly',
-          name: 'Ters Kol Açma',
-          description: 'Kolları geriye açma hareketi',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Sırt', 'Omuz'],
-          icon: 'GiArm',
-          instructions: ['Öne eğil', 'Kolları yana aç', 'Kürek kemiklerini sık']
-        },
-        {
-          id: 'standing_oblique_crunch',
-          name: 'Ayakta Yan Karın',
-          description: 'Ayakta yan karın hareketi',
-          type: 'reps',
-          reps: 12,
-          targetMuscles: ['Yan karın'],
-          icon: 'GiAbdominalArmor',
-          instructions: ['Ayakta dur', 'Diz ve dirseği birleştir', 'Yan karını sık']
-        }
-      ]
-    }    
-,
-    {
       id: 'hard_3',
       name: 'Atletik Performans',
       difficulty: 'Zor',
-      duration: '45 dakika',
+      duration: '38 dakika',
       description: 'Atletik performans geliştirici antrenman',
       exercises: [
         {
-          id: 'plyometric_pushup',
-          name: 'Plyometrik Şınav',
-          description: 'Patlayıcı şınav hareketi',
+          id: 'box_jump_high',
+          name: 'High Box Jump',
+          description: 'Yüksek kutu zıplaması',
           type: 'reps',
           reps: 8,
-          targetMuscles: ['Göğüs', 'Güç', 'Patlayıcılık'],
-          icon: 'GiMuscleUp',
-          instructions: ['Şınav pozisyonunda', 'Patlayıcı şekilde it', 'Eller havada kalacak']
-        },
-        {
-          id: 'single_leg_burpee',
-          name: 'Tek Bacak Burpee',
-          description: 'Tek bacakla burpee hareketi',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Tüm vücut', 'Denge', 'Güç'],
+          targetMuscles: ['Bacak', 'Güç', 'Patlayıcılık'],
           icon: 'GiJumpAcross',
-          instructions: ['Tek bacakla squat', 'Plank pozisyonuna geç', 'Tek bacakla zıpla']
+          instructions: ['Yüksek kutuya zıpla', 'Güçlü çık', 'Yumuşak in']
         },
         {
-          id: 'pistol_squat_full',
-          name: 'Tam Pistol Squat',
-          description: 'Tek bacak tam squat',
-          type: 'reps',
-          reps: 5,
-          targetMuscles: ['Bacak', 'Denge', 'Güç'],
-          icon: 'GiLeg',
-          instructions: ['Tek bacak uzat', 'Tam squat yap', 'Güçlü şekilde kalk']
-        },
-        {
-          id: 'handstand_hold',
-          name: 'Handstand Tutma',
-          description: 'El üzerinde durma',
+          id: 'sprint_intervals',
+          name: 'Sprint Intervals',
+          description: 'Yüksek yoğunluk koşu',
           type: 'timed',
           duration: 30,
-          targetMuscles: ['Omuz', 'Core', 'Denge'],
-          icon: 'GiMuscleUp',
-          instructions: ['Duvara yaslan', 'El üzerinde dur', 'Denge koru']
+          targetMuscles: ['Bacak', 'Kardiyo', 'Hız'],
+          icon: 'GiRunningShoe',
+          instructions: ['Maksimum hız', 'Yerinde sprint', 'Yüksek diz']
         },
         {
-          id: 'archer_squat',
-          name: 'Okçu Squat',
-          description: 'Tek bacağa yüklenen squat',
+          id: 'plyometric_pushup',
+          name: 'Plyometric Push-up',
+          description: 'Pliometrik şınav',
+          type: 'reps',
+          reps: 10,
+          targetMuscles: ['Göğüs', 'Güç', 'Patlayıcılık'],
+          icon: 'GiMuscleUp',
+          instructions: ['Patlayıcı şınav', 'Eller havada', 'Alkış yap']
+        },
+        {
+          id: 'lateral_bound',
+          name: 'Lateral Bound',
+          description: 'Yana sıçrama',
+          type: 'reps',
+          reps: 12,
+          targetMuscles: ['Bacak', 'Denge', 'Güç'],
+          icon: 'GiJumpAcross',
+          instructions: ['Yana güçlü sıçra', 'Tek ayak in', 'Her iki yan']
+        },
+        {
+          id: 'depth_jump',
+          name: 'Depth Jump',
+          description: 'Derinlik zıplaması',
           type: 'reps',
           reps: 6,
-          targetMuscles: ['Bacak', 'Kalça', 'Denge'],
-          icon: 'GiLeg',
-          instructions: ['Geniş pozisyon al', 'Bir bacağa yüklen', 'Diğer bacak düz']
+          targetMuscles: ['Bacak', 'Reaktif güç'],
+          icon: 'GiJumpAcross',
+          instructions: ['Yüksekten atla', 'Hemen tekrar zıpla', 'Reaktif hareket']
         },
         {
-          id: 'one_arm_pushup_prep',
-          name: 'Tek Kol Şınav Hazırlık',
-          description: 'Tek kol şınav hazırlığı',
+          id: 'medicine_ball_slam',
+          name: 'Medicine Ball Slam',
+          description: 'Top çarpma hareketi (hayali)',
           type: 'reps',
-          reps: 4,
-          targetMuscles: ['Göğüs', 'Kol', 'Core'],
-          icon: 'GiMuscleUp',
-          instructions: ['Geniş pozisyon', 'Bir kola yüklen', 'Maksimum güç']
+          reps: 12,
+          targetMuscles: ['Core', 'Omuz', 'Güç'],
+          icon: 'GiWeightLiftingUp',
+          instructions: ['Yukarı kaldır', 'Güçlü aşağı çarp', 'Tüm vücut kullan']
         },
         {
-          id: 'dragon_squat',
-          name: 'Ejder Squat',
-          description: 'İleri seviye squat varyasyonu',
+          id: 'single_leg_hop',
+          name: 'Single Leg Hop',
+          description: 'Tek bacak zıplama',
           type: 'reps',
-          reps: 4,
-          targetMuscles: ['Bacak', 'Esneklik', 'Güç'],
-          icon: 'GiDragonHead',
-          instructions: ['Çok geniş pozisyon', 'Bir bacağa tam çök', 'Diğer bacak düz uzat']
+          reps: 10,
+          targetMuscles: ['Bacak', 'Denge', 'Güç'],
+          icon: 'GiJumpAcross',
+          instructions: ['Tek bacakla zıpla', 'İleri geri', 'Her iki bacak']
         },
         {
-          id: 'human_flag_hold',
-          name: 'İnsan Bayrağı',
-          description: 'Yan plank ileri seviye',
+          id: 'agility_ladder',
+          name: 'Agility Ladder',
+          description: 'Çeviklik merdiveni (hayali)',
           type: 'timed',
-          duration: 10,
-          targetMuscles: ['Core', 'Kol', 'Tüm vücut'],
-          icon: 'GiAbdominalArmor',
-          instructions: ['Dikey çubuk tut', 'Vücudu yatay tut', 'Maksimum gerginlik']
+          duration: 30,
+          targetMuscles: ['Bacak', 'Koordinasyon', 'Hız'],
+          icon: 'GiFootsteps',
+          instructions: ['Hızlı ayak hareketi', 'Çeviklik paterni', 'Koordinasyon']
         },
         {
-          id: 'muscle_up_progression',
-          name: 'Muscle-Up Progresyon',
-          description: 'Muscle-up hareketi progresyonu',
+          id: 'power_skip',
+          name: 'Power Skip',
+          description: 'Güçlü sıçrama adımı',
           type: 'reps',
-          reps: 3,
-          targetMuscles: ['Sırt', 'Göğüs', 'Kol'],
-          icon: 'GiMuscleUp',
-          instructions: ['Çekme hareketi', 'Geçiş fazı', 'İtme hareketi']
+          reps: 16,
+          targetMuscles: ['Bacak', 'Güç', 'Koordinasyon'],
+          icon: 'GiJumpAcross',
+          instructions: ['Güçlü sıçra', 'Diz yukarı', 'Alternatif bacak']
         },
         {
-          id: 'advanced_shrimp_squat',
-          name: 'İleri Karides Squat',
-          description: 'İleri seviye tek bacak squat',
+          id: 'reactive_jump',
+          name: 'Reactive Jump',
+          description: 'Reaktif zıplama',
           type: 'reps',
-          reps: 3,
-          targetMuscles: ['Bacak', 'Esneklik', 'Denge'],
-          icon: 'GiLeg',
-          instructions: ['Arka bacağı tut', 'Tam squat yap', 'Maksimum esneklik']
+          reps: 8,
+          targetMuscles: ['Bacak', 'Reaktif güç'],
+          icon: 'GiJumpAcross',
+          instructions: ['Hızlı çömel', 'Anında zıpla', 'Reaktif hareket']
         }
       ]
     },
@@ -1419,108 +1430,219 @@ export const getAllSpecialPrograms = () => {
       id: 'hard_4',
       name: 'Ekstrem Dayanıklılık',
       difficulty: 'Zor',
-      duration: '50 dakika',
-      description: 'Maksimum dayanıklılık ve mental güç',
+      duration: '45 dakika',
+      description: 'Maksimum dayanıklılık testi',
       exercises: [
-        {
-          id: 'death_crawl',
-          name: 'Ölüm Sürünmesi',
-          description: 'Uzun mesafe ayı yürüyüşü',
-          type: 'timed',
-          duration: 90,
-          targetMuscles: ['Tüm vücut', 'Dayanıklılık'],
-          icon: 'GiBearHead',
-          instructions: ['Dört ayak pozisyonu', 'Sürekli hareket et', 'Mental güç']
-        },
         {
           id: 'tabata_burpee',
           name: 'Tabata Burpee',
           description: '20 saniye maksimum burpee',
           type: 'timed',
           duration: 20,
-          targetMuscles: ['Tüm vücut', 'Kardiyo'],
+          targetMuscles: ['Tüm vücut', 'Dayanıklılık'],
           icon: 'GiJumpAcross',
-          instructions: ['20 saniye maksimum hız', 'Mükemmel form koru', 'Sınırlarını zorla']
+          instructions: ['20 saniye maksimum', '10 saniye dinlen', '8 round']
         },
         {
-          id: 'iron_cross_hold',
-          name: 'Demir Haç Tutma',
-          description: 'Kollar yanlarda T pozisyonu',
-          type: 'timed',
-          duration: 30,
-          targetMuscles: ['Omuz', 'Göğüs', 'Core'],
-          icon: 'GiCrossedSwords',
-          instructions: ['T pozisyonu al', 'Kolları yanlarda tut', 'Maksimum gerginlik']
-        },
-        {
-          id: 'one_leg_wall_sit',
-          name: 'Tek Bacak Duvar Oturma',
-          description: 'Tek bacakla duvar oturma',
-          type: 'timed',
-          duration: 30,
-          targetMuscles: ['Bacak', 'Dayanıklılık'],
-          icon: 'GiLeg',
-          instructions: ['Duvara yaslan', 'Tek bacakla otur', 'Diğer bacağı kaldır']
-        },
-        {
-          id: 'typewriter_pullup',
-          name: 'Daktilo Çekme',
-          description: 'Sağa sola çekme hareketi',
-          type: 'reps',
-          reps: 6,
-          targetMuscles: ['Sırt', 'Kol', 'Core'],
-          icon: 'GiMuscleUp',
-          instructions: ['Çek', 'Sağa kay', 'Sola kay', 'İn']
-        },
-        {
-          id: 'planche_lean_advanced',
-          name: 'İleri Planche Eğilme',
-          description: 'Maksimum planche eğilme',
-          type: 'timed',
-          duration: 45,
-          targetMuscles: ['Omuz', 'Core', 'Bilek'],
-          icon: 'GiMuscleUp',
-          instructions: ['Maksimum öne eğil', 'Ayak parmakları kalkacak', 'Sınırda kal']
-        },
-        {
-          id: 'human_flag_negative',
-          name: 'İnsan Bayrağı Negatif',
-          description: 'Kontrollü inme hareketi',
-          type: 'reps',
-          reps: 3,
-          targetMuscles: ['Core', 'Kol', 'Kontrol'],
-          icon: 'GiAbdominalArmor',
-          instructions: ['Yukarı pozisyondan başla', 'Çok yavaş in', 'Kontrol et']
-        },
-        {
-          id: 'archer_pushup_advanced',
-          name: 'İleri Okçu Şınavı',
-          description: 'Tek kola maksimum yükleme',
-          type: 'reps',
-          reps: 5,
-          targetMuscles: ['Göğüs', 'Kol', 'Asimetrik güç'],
-          icon: 'GiMuscleUp',
-          instructions: ['Maksimum genişlik', 'Tek kola tam yüklen', 'Diğer kol düz']
-        },
-        {
-          id: 'front_lever_tuck',
-          name: 'Ön Kaldıraç Büzülme',
-          description: 'Ön kaldıraç pozisyonu',
-          type: 'timed',
-          duration: 15,
-          targetMuscles: ['Sırt', 'Core', 'Kol'],
-          icon: 'GiMuscleUp',
-          instructions: ['Asılı pozisyondan', 'Vücudu yatay tut', 'Dizler göğüste']
-        },
-        {
-          id: 'ultimate_plank',
-          name: 'Ultimate Plank',
-          description: 'Maksimum süre plank',
+          id: 'wall_sit_extreme',
+          name: 'Extreme Wall Sit',
+          description: 'Uzun süreli duvar oturma',
           type: 'timed',
           duration: 120,
-          targetMuscles: ['Core', 'Mental güç'],
+          targetMuscles: ['Bacak', 'Dayanıklılık'],
+          icon: 'GiLeg',
+          instructions: ['Duvar oturma', '2 dakika tut', 'Zihinsel güç']
+        },
+        {
+          id: 'plank_marathon',
+          name: 'Plank Marathon',
+          description: 'Uzun süreli plank',
+          type: 'timed',
+          duration: 180,
+          targetMuscles: ['Core', 'Dayanıklılık'],
           icon: 'GiAbdominalArmor',
-          instructions: ['Mükemmel form', 'Mental odaklan', 'Sınırlarını aş']
+          instructions: ['3 dakika plank', 'Nefes kontrol', 'Zihinsel dayanıklılık']
+        },
+        {
+          id: 'squat_hold_extreme',
+          name: 'Extreme Squat Hold',
+          description: 'Uzun süreli squat tutma',
+          type: 'timed',
+          duration: 90,
+          targetMuscles: ['Bacak', 'Dayanıklılık'],
+          icon: 'GiLeg',
+          instructions: ['Derin squat tut', '90 saniye', 'Zihinsel güç']
+        },
+        {
+          id: 'pushup_ladder',
+          name: 'Push-up Ladder',
+          description: 'Şınav merdiveni',
+          type: 'reps',
+          reps: 55,
+          targetMuscles: ['Göğüs', 'Dayanıklılık'],
+          icon: 'GiMuscleUp',
+          instructions: ['1-2-3...10-9-8...1', 'Toplam 55 şınav', 'Dinlenmeden']
+        },
+        {
+          id: 'mountain_climber_marathon',
+          name: 'Mountain Climber Marathon',
+          description: 'Uzun süreli mountain climber',
+          type: 'timed',
+          duration: 120,
+          targetMuscles: ['Core', 'Kardiyo', 'Dayanıklılık'],
+          icon: 'GiMountainClimbing',
+          instructions: ['2 dakika sürekli', 'Sabit tempo', 'Nefes kontrol']
+        },
+        {
+          id: 'jumping_jack_1000',
+          name: '1000 Jumping Jack',
+          description: '1000 jumping jack challenge',
+          type: 'reps',
+          reps: 1000,
+          targetMuscles: ['Tüm vücut', 'Kardiyo'],
+          icon: 'GiJumpAcross',
+          instructions: ['1000 tekrar', 'Kendi temponda', 'Zihinsel güç']
+        },
+        {
+          id: 'bear_crawl_distance',
+          name: 'Bear Crawl Distance',
+          description: 'Uzun mesafe ayı yürüyüşü',
+          type: 'timed',
+          duration: 180,
+          targetMuscles: ['Tüm vücut', 'Dayanıklılık'],
+          icon: 'GiBearFace',
+          instructions: ['3 dakika ayı yürüyüşü', 'Sürekli hareket', 'Core sıkı']
+        },
+        {
+          id: 'lunge_walk_marathon',
+          name: 'Lunge Walk Marathon',
+          description: 'Uzun mesafe lunge yürüyüşü',
+          type: 'reps',
+          reps: 100,
+          targetMuscles: ['Bacak', 'Dayanıklılık'],
+          icon: 'GiLeg',
+          instructions: ['100 lunge adımı', 'Sürekli hareket', 'Derin lunge']
+        },
+        {
+          id: 'isometric_hold_circuit',
+          name: 'Isometric Hold Circuit',
+          description: 'İzometrik tutma devresi',
+          type: 'timed',
+          duration: 300,
+          targetMuscles: ['Tüm vücut', 'Dayanıklılık'],
+          icon: 'GiStrongMan',
+          instructions: ['5 farklı pozisyon', 'Her biri 1 dakika', 'Zihinsel güç']
+        }
+      ]
+    },
+    {
+      id: 'hard_5',
+      name: 'Calisthenics Master',
+      difficulty: 'Zor',
+      duration: '42 dakika',
+      description: 'İleri seviye calisthenics hareketleri',
+      exercises: [
+        {
+          id: 'muscle_up',
+          name: 'Muscle-up',
+          description: 'Tam muscle-up hareketi',
+          type: 'reps',
+          reps: 3,
+          targetMuscles: ['Sırt', 'Kol', 'Core'],
+          icon: 'GiMuscleUp',
+          instructions: ['Çek yukarı', 'Geçiş yap', 'İt yukarı']
+        },
+        {
+          id: 'front_lever',
+          name: 'Front Lever',
+          description: 'Ön lever tutma',
+          type: 'timed',
+          duration: 10,
+          targetMuscles: ['Sırt', 'Core', 'Kol'],
+          icon: 'GiStrongMan',
+          instructions: ['Çubuğa asıl', 'Vücut yatay', 'Güçlü tut']
+        },
+        {
+          id: 'back_lever',
+          name: 'Back Lever',
+          description: 'Arka lever tutma',
+          type: 'timed',
+          duration: 8,
+          targetMuscles: ['Göğüs', 'Omuz', 'Core'],
+          icon: 'GiStrongMan',
+          instructions: ['Ters tutma', 'Vücut yatay', 'Omuz güçlü']
+        },
+        {
+          id: 'planche_pushup',
+          name: 'Planche Push-up',
+          description: 'Planche şınavı',
+          type: 'reps',
+          reps: 2,
+          targetMuscles: ['Omuz', 'Core', 'Kol'],
+          icon: 'GiHandstand',
+          instructions: ['Planche pozisyonu', 'Şınav hareketi', 'İleri seviye']
+        },
+        {
+          id: 'human_flag',
+          name: 'Human Flag',
+          description: 'İnsan bayrağı',
+          type: 'timed',
+          duration: 5,
+          targetMuscles: ['Core', 'Kol', 'Yan karın'],
+          icon: 'GiStrongMan',
+          instructions: ['Dikey çubuk', 'Vücut yatay', 'Bayrak pozisyonu']
+        },
+        {
+          id: 'one_arm_pullup_neg',
+          name: 'One Arm Pull-up Negative',
+          description: 'Tek kol çekme negatif',
+          type: 'reps',
+          reps: 3,
+          targetMuscles: ['Sırt', 'Kol', 'Core'],
+          icon: 'GiMuscleUp',
+          instructions: ['Tek kol çekme', 'Yavaş inme', 'Her iki kol']
+        },
+        {
+          id: 'handstand_pushup',
+          name: 'Handstand Push-up',
+          description: 'El duruşu şınavı',
+          type: 'reps',
+          reps: 5,
+          targetMuscles: ['Omuz', 'Kol', 'Core'],
+          icon: 'GiHandstand',
+          instructions: ['El duruşu', 'Şınav hareketi', 'Duvara yaslan']
+        },
+        {
+          id: 'pistol_squat',
+          name: 'Pistol Squat',
+          description: 'Tek bacak squat',
+          type: 'reps',
+          reps: 5,
+          targetMuscles: ['Bacak', 'Denge', 'Core'],
+          icon: 'GiLeg',
+          instructions: ['Tek bacak squat', 'Tam hareket', 'Her iki bacak']
+        },
+        {
+          id: 'dragon_flag',
+          name: 'Dragon Flag',
+          description: 'Ejder bayrağı',
+          type: 'reps',
+          reps: 5,
+          targetMuscles: ['Core', 'Sırt'],
+          icon: 'GiAbdominalArmor',
+          instructions: ['Sırt üstü', 'Vücut düz kaldır', 'Core güçlü']
+        },
+        {
+          id: 'maltese_prep',
+          name: 'Maltese Prep',
+          description: 'Malta haçı hazırlık',
+          type: 'timed',
+          duration: 10,
+          targetMuscles: ['Omuz', 'Göğüs', 'Core'],
+          icon: 'GiStrongMan',
+          instructions: ['Kollar yana', 'Vücut yatay', 'İleri seviye güç']
         }
       ]
     }
+  ]
+};

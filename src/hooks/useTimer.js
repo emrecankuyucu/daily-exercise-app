@@ -9,12 +9,12 @@ const useTimer = (initialTime = 0, onComplete = null) => {
   const pausedTimeRef = useRef(null);
 
   // Start timer
-  const startTimer = () => {
+  const startTimer = useCallback(() => {
     if (timeRemaining > 0) {
       setTimerState(TIMER_STATES.RUNNING);
       startTimeRef.current = Date.now();
     }
-  };
+  }, [timeRemaining]);
 
   // Pause timer
   const pauseTimer = useCallback(() => {
@@ -25,22 +25,22 @@ const useTimer = (initialTime = 0, onComplete = null) => {
   }, [timerState, timeRemaining]);
 
   // Resume timer
-  const resumeTimer = () => {
+  const resumeTimer = useCallback(() => {
     if (timerState === TIMER_STATES.PAUSED) {
       setTimerState(TIMER_STATES.RUNNING);
       startTimeRef.current = Date.now();
     }
-  };
+  }, [timerState]);
 
   // Reset timer
-  const resetTimer = (newTime = initialTime) => {
+  const resetTimer = useCallback((newTime = initialTime) => {
     setTimerState(TIMER_STATES.IDLE);
     setTimeRemaining(newTime);
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-  };
+  }, [initialTime]);
 
   // Stop timer
   const stopTimer = () => {
@@ -99,7 +99,7 @@ const useTimer = (initialTime = 0, onComplete = null) => {
   }, [timerState, pauseTimer]);
 
   // Format time for display
-  const formatTime = (seconds) => {
+  const formatTime = (seconds = timeRemaining) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;

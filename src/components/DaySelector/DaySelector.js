@@ -3,10 +3,14 @@ import './DaySelector.css';
 import { DAYS_OF_WEEK, REST_DAYS } from '../../utils/constants';
 import { exercisePrograms, dayKeys } from '../../data/exercises';
 
-const DaySelector = ({ onDaySelect, selectedDay }) => {
+const DaySelector = ({ onDaySelect, onSpecialProgramsSelect, selectedDay }) => {
   const handleDayClick = (day) => {
     const dayKey = dayKeys[day];
     onDaySelect(dayKey);
+  };
+
+  const handleSpecialProgramsClick = () => {
+    onSpecialProgramsSelect();
   };
 
   const getDayInfo = (day) => {
@@ -65,8 +69,26 @@ const DaySelector = ({ onDaySelect, selectedDay }) => {
         })}
       </div>
       
+      {/* Özel Programlar Butonu */}
+      <div className="special-programs-section">
+        <div
+          className="special-programs-card glass-card animate-zoom-in"
+          style={{ animationDelay: '0.8s' }}
+          onClick={handleSpecialProgramsClick}
+        >
+          <div className="special-programs-icon">🎯</div>
+          <div className="special-programs-title">Özel Programlar</div>
+          <div className="special-programs-subtitle">30 Farklı Antrenman</div>
+          <div className="difficulty-badges">
+            <span className="difficulty-badge easy">Kolay</span>
+            <span className="difficulty-badge medium">Orta</span>
+            <span className="difficulty-badge hard">Zor</span>
+          </div>
+        </div>
+      </div>
+
       <div className="instruction-text">
-        <p>Bir gün seçerek egzersiz programını başlat!</p>
+        <p>Bir gün seçerek egzersiz programını başlat veya özel programları keşfet!</p>
       </div>
     </div>
   );

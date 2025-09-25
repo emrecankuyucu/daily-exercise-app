@@ -1,0 +1,321 @@
+.special-program-selector {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.selector-header {
+  text-align: center;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: white;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.selector-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.selector-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Zorluk Seçici */
+.difficulty-selector {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.difficulty-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  color: white;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  min-width: 120px;
+}
+
+.difficulty-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.difficulty-btn.active.easy {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.3) 0%, rgba(34, 197, 94, 0.3) 100%);
+  border-color: rgba(74, 222, 128, 0.6);
+  box-shadow: 0 8px 25px rgba(74, 222, 128, 0.3);
+}
+
+.difficulty-btn.active.medium {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.3) 0%, rgba(245, 158, 11, 0.3) 100%);
+  border-color: rgba(251, 191, 36, 0.6);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+}
+
+.difficulty-btn.active.hard {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.3) 0%, rgba(220, 38, 38, 0.3) 100%);
+  border-color: rgba(239, 68, 68, 0.6);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+}
+
+.difficulty-icon {
+  font-size: 1.5rem;
+}
+
+.difficulty-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.program-count {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Program Grid */
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.program-card {
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.program-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.6);
+}
+
+.program-card.easy {
+  border: 2px solid rgba(74, 222, 128, 0.3);
+}
+
+.program-card.medium {
+  border: 2px solid rgba(251, 191, 36, 0.3);
+}
+
+.program-card.hard {
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+/* Program Header */
+.program-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.program-difficulty-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+.program-duration {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Program Content */
+.program-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.program-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.4;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.program-stats {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Program Footer */
+.program-footer {
+  margin-top: auto;
+}
+
+.start-program-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.start-program-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .special-program-selector {
+    gap: 20px;
+  }
+  
+  .selector-title {
+    font-size: 1.7rem;
+  }
+  
+  .selector-subtitle {
+    font-size: 1rem;
+  }
+  
+  .difficulty-selector {
+    gap: 10px;
+  }
+  
+  .difficulty-btn {
+    padding: 12px 20px;
+    min-width: 100px;
+  }
+  
+  .programs-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 5px;
+  }
+  
+  .program-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .selector-header {
+    text-align: left;
+    padding-top: 40px;
+  }
+  
+  .back-button {
+    position: static;
+    margin-bottom: 15px;
+    width: fit-content;
+  }
+  
+  .selector-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .selector-subtitle {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .difficulty-selector {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .difficulty-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .program-card {
+    padding: 15px;
+  }
+  
+  .program-name {
+    font-size: 1.1rem;
+  }
+  
+  .program-description {
+    font-size: 0.8rem;
+  }
+}
